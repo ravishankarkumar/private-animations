@@ -1,0 +1,7 @@
+name = "ai"
+
+input = "#4FC3F7"
+hidden = "#7E57C2"
+output = "#FF7043"
+attention = "#26A69A"
+highlight = "#FDD835"

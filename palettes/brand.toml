@@ -1,0 +1,7 @@
+name = "brand"
+
+primary = "#1A73E8"
+secondary = "#EA4335"
+accent = "#FBBC05"
+success = "#34A853"
+neutral = "#9AA0A6"

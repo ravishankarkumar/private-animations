@@ -1,0 +1,9 @@
+[package]
+name = "murali-test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+murali = { version = "0.1.6", path = "../murali" }
+anyhow = "1.0"
+glam = { version = "0.27", features = ["bytemuck"] }
