@@ -1,21 +1,18 @@
+use murali::App;
 use murali::colors::GREEN_E;
-use murali::prelude::{ORIGIN, CAMERA_DEFAULT_POS};
-use murali::{App};
 use murali::engine::scene::Scene;
 use murali::engine::timeline::Timeline;
 use murali::frontend::animation::Ease;
 use murali::frontend::collection::primitives::circle::Circle;
+use murali::prelude::{CAMERA_DEFAULT_POS, ORIGIN};
 
 fn main() -> anyhow::Result<()> {
     // 1. Create a scene
     let mut scene = Scene::new();
-    
+
     // 2. Add a circle tattva
-    let circle_id = scene.add_tattva(
-        Circle::new(1.5, 48, GREEN_E),
-        ORIGIN,
-    );
-    
+    let circle_id = scene.add_tattva(Circle::new(1.5, 48, GREEN_E), ORIGIN);
+
     // 3. Position the camera
     scene.camera_mut().position = CAMERA_DEFAULT_POS;
 
@@ -28,7 +25,7 @@ fn main() -> anyhow::Result<()> {
         .ease(Ease::OutCubic)
         .draw()
         .spawn();
-    
+
     timeline
         .animate(circle_id)
         .at(4.0)

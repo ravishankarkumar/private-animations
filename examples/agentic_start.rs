@@ -2,6 +2,7 @@ use anyhow::Result;
 use glam::{Quat, Vec3, Vec4};
 use std::path::PathBuf;
 
+use murali::App;
 use murali::engine::export::ExportSettings;
 use murali::engine::scene::Scene;
 use murali::engine::timeline::Timeline;
@@ -10,7 +11,6 @@ use murali::frontend::collection::primitives::circle::Circle;
 use murali::frontend::collection::primitives::line::Line;
 use murali::frontend::collection::primitives::rectangle::Rectangle;
 use murali::frontend::collection::text::label::Label;
-use murali::App;
 
 const EXPORT_DURATION: f32 = 3.1;
 const CAPTURE_TIME: f32 = 2.34;
