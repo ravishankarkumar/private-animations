@@ -1,2 +1,4 @@
-/target
+**/target
 **/rendered_output
+**/renders
+**/*.DS_Store
