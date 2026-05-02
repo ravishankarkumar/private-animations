@@ -2,6 +2,43 @@
 name = "murali-test"
 version = "0.1.0"
 edition = "2024"
+default-run = "murali-test"
+
+[lib]
+name = "private_animations"
+path = "src/lib.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-main-explainer"
+path = "src/bin/kavriq_hidden_data_main_explainer.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-hook"
+path = "src/bin/kavriq_hidden_data_hook.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-agent-run-trace"
+path = "src/bin/kavriq_hidden_data_agent_run_trace.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-logs-are-system"
+path = "src/bin/kavriq_hidden_data_logs_are_system.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-feedback-loop"
+path = "src/bin/kavriq_hidden_data_feedback_loop.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-governance"
+path = "src/bin/kavriq_hidden_data_governance.rs"
+
+[[bin]]
+name = "murali-ai-indicator"
+path = "src/bin/murali_ai_indicator.rs"
+
+[[bin]]
+name = "murali-ai-orb"
+path = "src/bin/murali_ai_orb.rs"
 
 [dependencies]
 murali = { version = "0.1.6", path = "../murali" }

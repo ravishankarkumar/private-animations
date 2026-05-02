@@ -1,0 +1,3 @@
+fn main() -> anyhow::Result<()> {
+    private_animations::animations::kavriq::hidden_data_problem::agent_run_trace::run()
+}
