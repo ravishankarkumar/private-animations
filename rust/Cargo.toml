@@ -1,0 +1,138 @@
+[package]
+name = "murali-test"
+version = "0.1.0"
+edition = "2024"
+default-run = "murali-test"
+
+[lib]
+name = "private_animations"
+path = "src/lib.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-main-explainer"
+path = "src/bin/kavriq_hidden_data_main_explainer.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-welcome-positioning"
+path = "src/bin/kavriq_hidden_data_welcome_positioning.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-traditional-software-foundations"
+path = "src/bin/kavriq_hidden_data_traditional_software_foundations.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-hook"
+path = "src/bin/kavriq_hidden_data_hook.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-hook-part-1"
+path = "src/bin/kavriq_hidden_data_hook_part_1.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-hook-part-2"
+path = "src/bin/kavriq_hidden_data_hook_part_2.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-hook-part-3"
+path = "src/bin/kavriq_hidden_data_hook_part_3.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-intelligence-itself"
+path = "src/bin/kavriq_hidden_data_intelligence_itself.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-ai-data-example"
+path = "src/bin/kavriq_hidden_data_ai_data_example.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-gravity-well"
+path = "src/bin/kavriq_hidden_data_gravity_well.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-domino-chain"
+path = "src/bin/kavriq_hidden_data_domino_chain.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-enterprise-vs-startup"
+path = "src/bin/kavriq_hidden_data_enterprise_vs_startup.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-enterprise-positioning-card"
+path = "src/bin/kavriq_hidden_data_enterprise_positioning_card.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-data-management-surface"
+path = "src/bin/kavriq_hidden_data_data_management_surface.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-design-shift-bullets"
+path = "src/bin/kavriq_hidden_data_design_shift_bullets.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-successful-teams-preplan"
+path = "src/bin/kavriq_hidden_data_successful_teams_preplan.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-security-tension"
+path = "src/bin/kavriq_hidden_data_security_tension.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-subscribe-pitch"
+path = "src/bin/kavriq_hidden_data_subscribe_pitch.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-single-run-capture"
+path = "src/bin/kavriq_hidden_data_single_run_capture.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-multi-agent-causality"
+path = "src/bin/kavriq_hidden_data_multi_agent_causality.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-deliberate-capture"
+path = "src/bin/kavriq_hidden_data_deliberate_capture.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-trace-feedback-loop-long"
+path = "src/bin/kavriq_hidden_data_trace_feedback_loop_long.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-system-shift"
+path = "src/bin/kavriq_hidden_data_system_shift.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-agent-run-trace"
+path = "src/bin/kavriq_hidden_data_agent_run_trace.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-logs-are-system"
+path = "src/bin/kavriq_hidden_data_logs_are_system.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-feedback-loop"
+path = "src/bin/kavriq_hidden_data_feedback_loop.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-governance"
+path = "src/bin/kavriq_hidden_data_governance.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-walkthrough-certainty"
+path = "src/bin/kavriq_hidden_data_walkthrough_certainty.rs"
+
+[[bin]]
+name = "kavriq-hidden-data-shattered-premise"
+path = "src/bin/kavriq_hidden_data_shattered_premise.rs"
+
+[[bin]]
+name = "murali-ai-indicator"
+path = "src/bin/murali_ai_indicator.rs"
+
+[[bin]]
+name = "murali-ai-orb"
+path = "src/bin/murali_ai_orb.rs"
+
+[dependencies]
+murali = { version = "0.1.6", path = "../murali" }
+anyhow = "1.0"
+glam = { version = "0.27", features = ["bytemuck"] }

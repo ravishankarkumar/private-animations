@@ -1,0 +1,20 @@
+{
+  "name": "private-animations",
+  "version": "1.0.0",
+  "description": "private animations using murali-js",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "render:agent": "tsx mute-animations/agent.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "murali-js": "github:murali-engine/murali-js"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}

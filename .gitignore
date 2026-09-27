@@ -1,5 +1,24 @@
+# Rust
+
 **/target
 **/rendered_output
 **/renders
 **/*.DS_Store
+.DS_Store
 **/interesting_outputs
+
+
+
+# nodejs
+
+**/node_modules
+**/package-lock.json
+js/**/output
+js/**/node_modules
+
+
+Common
+
+resources/fonts/*
+resources/audio/*
+.DS_Store
