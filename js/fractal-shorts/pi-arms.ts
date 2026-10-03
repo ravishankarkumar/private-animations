@@ -18,12 +18,14 @@ const MISS_A = 7.002137251275432;
 const MISS_B = 113.0000072784448;
 // The default camera stays centered, so the circle does not wobble. Each close
 // look moves to the start ring, punches in with the focus locked on the gap,
-// watches the pen pass, then returns home.
+// and watches the pen pass. The way home is one move back to that centered
+// view. Stopping at a middle zoom paints the miss as a single line.
 const STILL_A = 8.6;
 const MOVE_A = 1.3;
 const FILL = 11.2;
 const MOVE_B = 1.2;
 const HOLD_END = 0.7;
+const FRAME = 1 / 30;
 const ZOOM_IN = 2.8;
 const ZOOM_A = 7000;
 const LOOK_A_X = 1.9999098441556945;
@@ -489,14 +491,16 @@ class PiArmsShort extends Scene {
       leg(MOVE_A, MISS_A - 1.2e-5, ZOOM_IN, LOOK_A_X, LOOK_A_Y, "inOutCubic");
       leg(0.7, MISS_A - 4e-6, ZOOM_A, LOOK_A_X, LOOK_A_Y, "inOutCubic");
       leg(1.8, MISS_A + 4e-6, ZOOM_A, LOOK_A_X, LOOK_A_Y, "linear");
-      leg(0.45, MISS_A + 1.2e-5, ZOOM_IN, LOOK_A_X, LOOK_A_Y, "outCubic");
-      leg(0.8, 8.4, 1, 0, 0, "outCubic");
+      // One frame back to the centered camera. A slower zoom spends that
+      // frame in between, where the two paths draw on top of each other.
+      leg(FRAME, MISS_A + 4e-6, 1, 0, 0, "linear");
+      leg(1.2, 8.4, 1, 0, 0, "linear");
       leg(FILL, 112.55, 1, 0, 0, "linear");
       leg(MOVE_B, MISS_B - 3.5e-10, ZOOM_IN, LOOK_B_X, LOOK_B_Y, "inOutCubic");
       leg(0.65, MISS_B - 1e-10, ZOOM_B, LOOK_B_X, LOOK_B_Y, "inOutCubic");
       leg(1.75, MISS_B + 1e-10, ZOOM_B, LOOK_B_X, LOOK_B_Y, "linear");
-      leg(0.5, MISS_B + 3e-10, ZOOM_IN, LOOK_B_X, LOOK_B_Y, "outCubic");
-      leg(0.75, 115, 1, 0, 0, "outCubic");
+      leg(FRAME, MISS_B + 1e-10, 1, 0, 0, "linear");
+      leg(37 / 30, 115, 1, 0, 0, "linear");
       cursor += HOLD_END;
       t.wait(cursor);
     }));

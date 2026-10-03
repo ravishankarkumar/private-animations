@@ -4,6 +4,7 @@
 **/rendered_output
 **/renders
 **/*.DS_Store
+**/.DS_Store
 .DS_Store
 **/interesting_outputs
 
@@ -22,3 +23,5 @@ Common
 resources/fonts/*
 resources/audio/*
 .DS_Store
+ready
+
