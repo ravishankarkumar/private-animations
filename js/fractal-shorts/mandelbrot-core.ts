@@ -2,7 +2,7 @@ import { render } from "murali-js";
 import { ThreeTattva } from "murali-js/adapters";
 import { YouTubeSubscribe, YouTubeSubscribeSequence } from "murali-js/composite";
 import { Scene, timeline, type TattvaState } from "murali-js/core";
-import { Rectangle } from "murali-js/primitives";
+import { Circle } from "murali-js/primitives";
 import { Label } from "murali-js/text";
 import * as THREE from "three";
 
@@ -11,10 +11,23 @@ const INK = "#F4FBFF";
 const CYAN = "#70E7FF";
 const GOLD = "#FFD37A";
 const MUTED = "#89A6B6";
+const DIM = "#163244";
 const PLATE = 7.25;
 
-const DEPTHS = [1, 2, 4, 8, 16, 32, 64, 128, 256] as const;
-const BUILD_STEP = 0.78;
+// One repeat of z² + c per stop. The first passes are where the disk
+// dents, grows a cusp, and buds the round head, so those moves are slow.
+// Later passes only add filaments, and the view tightens while they do.
+const PASSES = [1, 2, 3, 4, 6, 8, 16, 40, 256] as const;
+const CARVES = [0, 1.9, 1.5, 1.65, 1.15, 0.95, 0.8, 0.7, 1.85];
+const HOLDS = [0.4, 0.55, 0.55, 0.6, 0.45, 0.4, 0.35, 0.35, 4.0];
+const BUILD_END = HOLDS.reduce((sum, hold, index) => sum + hold + CARVES[index]!, 0);
+const DIVE = 4.6;
+const CREEP = 4.0;
+const PULL = 2.5;
+const ADMIRE = 0.6;
+const UNTYPE = 0.5;
+const SHRINK = 0.45;
+const LIFT = 0.55;
 
 const VERTEX_SHADER = `
 varying vec2 vUv;
@@ -30,106 +43,132 @@ precision highp float;
 
 varying vec2 vUv;
 uniform float uIterations;
-uniform float uReveal;
 uniform float uZoom;
+uniform float uFrame;
 
-const vec2 FULL_CENTER = vec2(-0.70, 0.0);
-const float FULL_WIDTH = 3.15;
-const vec2 DEEP_CENTER = vec2(-0.743643887, 0.131825904);
-const float DEEP_WIDTH = 0.018;
+const vec2 WIDE_CENTER = vec2(0.0, 0.0);
+const float WIDE_WIDTH = 5.2;
+const vec2 SET_CENTER = vec2(-0.70, 0.0);
+const float SET_WIDTH = 3.4;
+const vec2 DEEP_CENTER = vec2(-0.743644, 0.131826);
+const float DEEP_WIDTH = 0.032;
+const float DEEP_CAP = 480.0;
 const vec3 FIELD = vec3(3.0, 7.0, 17.0) / 255.0;
-const vec3 INTERIOR = vec3(1.5, 3.0, 9.0) / 255.0;
+const vec3 INTERIOR = vec3(0.0, 1.0, 6.0) / 255.0;
 
-vec3 palette(float value) {
-  float t = clamp(value, 0.0, 1.0);
+vec3 exterior(float shown) {
+  if (shown <= 2.8) return FIELD;
+  float t = clamp((shown - 2.8) / 96.0, 0.0, 1.0);
   vec3 blue = vec3(17.0, 88.0, 166.0) / 255.0;
   vec3 cyan = vec3(65.0, 220.0, 235.0) / 255.0;
-  vec3 cream = vec3(255.0, 224.0, 157.0) / 255.0;
-  if (t < 0.58) return mix(blue, cyan, t / 0.58);
-  return mix(cyan, cream, (t - 0.58) / 0.42);
+  vec3 cream = vec3(255.0, 236.0, 196.0) / 255.0;
+  vec3 ink = t < 0.45 ? mix(blue, cyan, t / 0.45) : mix(cyan, cream, (t - 0.45) / 0.55);
+  if (shown < 8.0) {
+    float fade = (shown - 2.8) / (8.0 - 2.8);
+    float smoothFade = fade * fade * (3.0 - 2.0 * fade);
+    return mix(FIELD, ink, smoothFade);
+  }
+  return ink;
 }
 
 void main() {
-  float revealRadius = uReveal * 0.78;
-  float revealMask = 1.0 - smoothstep(revealRadius - 0.045, revealRadius + 0.045, length(vUv - 0.5));
-  if (revealMask <= 0.001) {
-    gl_FragColor = vec4(FIELD, 0.0);
-    return;
-  }
-
   float zoom = clamp(uZoom, 0.0, 1.0);
-  float easedZoom = zoom * zoom * (3.0 - 2.0 * zoom);
-  float width = exp(mix(log(FULL_WIDTH), log(DEEP_WIDTH), easedZoom));
-  float lambda = FULL_WIDTH / width;
-  float lambdaMax = FULL_WIDTH / DEEP_WIDTH;
+  float frame = clamp(uFrame, 0.0, 1.0);
+  float framedWidth = exp(mix(log(WIDE_WIDTH), log(SET_WIDTH), frame));
+  vec2 framedCenter = mix(WIDE_CENTER, SET_CENTER, frame);
+  float zoomWidth = exp(mix(log(SET_WIDTH), log(DEEP_WIDTH), zoom));
+  float lambda = SET_WIDTH / zoomWidth;
+  float lambdaMax = SET_WIDTH / DEEP_WIDTH;
   float centerMix = (1.0 / lambda - 1.0 / lambdaMax) / (1.0 - 1.0 / lambdaMax);
-  vec2 center = DEEP_CENTER + (FULL_CENTER - DEEP_CENTER) * centerMix;
+  vec2 zoomCenter = DEEP_CENTER + (SET_CENTER - DEEP_CENTER) * centerMix;
+  float width = zoom <= 0.0008 ? framedWidth : zoomWidth;
+  vec2 center = zoom <= 0.0008 ? framedCenter : zoomCenter;
   vec2 c = center + (vUv - 0.5) * width;
 
-  float cap = mix(max(uIterations, 1.0), 420.0, easedZoom);
+  // Always integrate far enough to know the real escape time. The build
+  // then reveals that time with a moving threshold, so the disk shrinks
+  // into the next contour instead of popping.
+  float shownLevel = max(uIterations, 1.0);
+  float limit = mix(256.0, DEEP_CAP, zoom);
   float zr = 0.0;
   float zi = 0.0;
   float n = 0.0;
-  for (int index = 0; index < 420; index++) {
+  for (int index = 0; index < 480; index++) {
     float zr2 = zr * zr;
     float zi2 = zi * zi;
-    if (zr2 + zi2 > 4.0 || n >= cap) break;
+    if (zr2 + zi2 > 4.0 || n >= limit) break;
     zi = 2.0 * zr * zi + c.y;
     zr = zr2 - zi2 + c.x;
     n += 1.0;
   }
 
   float mag2 = zr * zr + zi * zi;
+  bool escaped = mag2 > 4.0;
+  float mu = escaped
+    ? n - log(log(max(sqrt(mag2), 2.0001)) / log(2.0)) / log(2.0)
+    : limit + 4.0;
+  // Integer pass decides membership. Smooth mu can dip below the pass it
+  // belongs to, and using it alone draws a second curve on the disk.
+  bool building = zoom <= 0.001;
+  bool outside = escaped;
+  if (building) {
+    float base = floor(shownLevel);
+    float frac = shownLevel - base;
+    if (!escaped || n > base + 1.0) outside = false;
+    else if (n <= base) outside = true;
+    else outside = frac > 0.0001 && mu < shownLevel;
+  }
   vec3 color = INTERIOR;
-  if (mag2 > 4.0) {
-    float mu = n - log(log(sqrt(mag2)) / log(2.0)) / log(2.0);
-    float normalized = zoom < 0.02
-      ? clamp(mu / max(cap, 8.0), 0.0, 1.0)
-      : fract(mu * 0.035 + easedZoom * 0.18);
-    color = palette(normalized);
-
-    // The newest escape band is the moving construction frontier.
-    float frontier = cap - mu;
-    float glow = 1.0 - smoothstep(0.0, 1.35, frontier);
-    color = mix(color, vec3(0.94, 0.99, 1.0), glow * (1.0 - easedZoom * 0.65));
+  if (outside) {
+    float shown = building ? mu : mu / limit * 110.0;
+    color = exterior(shown);
+    float dist = shownLevel - mu;
+    float rim = building ? 1.0 - smoothstep(8.0, 22.0, shownLevel) : 0.0;
+    bool newest = n > shownLevel - 1.5;
+    if (building && newest && dist > 0.0 && rim > 0.01) {
+      float glow = 1.0 - smoothstep(3.0, 9.0, shownLevel);
+      float halo = 1.0 - smoothstep(0.1, 0.42, dist);
+      float core = 1.0 - smoothstep(0.0, 0.14, dist);
+      color = mix(color, vec3(0.32, 0.72, 0.9), halo * halo * 0.55 * glow);
+      color = mix(color, vec3(0.92, 0.98, 1.0), core * core * rim);
+    }
   }
 
-  float vignette = 1.0 - smoothstep(0.4, 0.72, length(vUv - 0.5));
-  color = mix(FIELD, color, mix(1.0, vignette, easedZoom * 0.52));
-  gl_FragColor = vec4(color, revealMask);
+  if (zoom > 0.04) {
+    float vig = 1.0 - smoothstep(0.30, 0.56, length(vUv - 0.5));
+    color = mix(FIELD, color, vig);
+  }
+  gl_FragColor = vec4(color, 1.0);
 }
 `;
 
 interface MandelbrotCoreState extends TattvaState {
   iterations: number;
-  reveal: number;
   zoom: number;
+  frame: number;
 }
 
 class MandelbrotCorePlate extends ThreeTattva<MandelbrotCoreState> {
   constructor() {
     let material: THREE.ShaderMaterial | undefined;
-    let railMaterial: THREE.MeshBasicMaterial | undefined;
-    const progressMaterials: THREE.MeshBasicMaterial[] = [];
     super({
       setup({ scene, renderer }) {
         // Murali captures immediately after rendering. Waiting for WebGL here
-        // prevents the GPU layer and DOM overlays from landing in different
-        // compositor frames during deterministic export.
+        // keeps the GPU picture and the DOM labels in the same export frame.
         const renderFrame = renderer.render.bind(renderer);
         renderer.render = ((threeScene, camera) => {
           renderFrame(threeScene, camera);
           renderer.getContext().finish();
         }) as typeof renderer.render;
+        renderer.setClearColor(0x000000, 0);
         material = new THREE.ShaderMaterial({
           vertexShader: VERTEX_SHADER,
           fragmentShader: FRAGMENT_SHADER,
           uniforms: {
             uIterations: { value: 1 },
-            uReveal: { value: 0 },
             uZoom: { value: 0 },
+            uFrame: { value: 0 },
           },
-          transparent: true,
           depthTest: false,
           depthWrite: false,
         });
@@ -137,44 +176,14 @@ class MandelbrotCorePlate extends ThreeTattva<MandelbrotCoreState> {
         mesh.name = "mandelbrot-core-plane";
         mesh.renderOrder = -10;
         scene.add(mesh);
-
-        railMaterial = new THREE.MeshBasicMaterial({
-          color: 0x0b1b29,
-          transparent: true,
-          opacity: 0,
-          depthTest: false,
-        });
-        const rail = new THREE.Mesh(
-          new THREE.PlaneGeometry(5.35, 0.5),
-          railMaterial,
-        );
-        rail.position.set(0, -4.62, 0);
-        scene.add(rail);
-        DEPTHS.forEach((_depth, index) => {
-          const dotMaterial = new THREE.MeshBasicMaterial({
-            color: 0x19384a,
-            transparent: true,
-            opacity: 0,
-            depthTest: false,
-          });
-          progressMaterials.push(dotMaterial);
-          const dot = new THREE.Mesh(new THREE.CircleGeometry(0.105, 28), dotMaterial);
-          dot.position.set(-2.08 + index * 0.52, -4.62, 0.02);
-          scene.add(dot);
-        });
       },
       update(_context, state) {
         if (!material) return;
         material.uniforms.uIterations!.value = state.iterations;
-        material.uniforms.uReveal!.value = state.reveal;
         material.uniforms.uZoom!.value = state.zoom;
-        if (railMaterial) railMaterial.opacity = Math.min(0.95, state.reveal * 2);
-        progressMaterials.forEach((dot, index) => {
-          dot.opacity = Math.min(1, state.reveal * 3);
-          dot.color.set(state.iterations >= DEPTHS[index]! ? (index === DEPTHS.length - 1 ? GOLD : CYAN) : "#19384A");
-        });
+        material.uniforms.uFrame!.value = state.frame;
       },
-    }, { state: { iterations: 1, reveal: 0, zoom: 0 } });
+    }, { state: { iterations: 1, zoom: 0, frame: 0 } });
     this.worldSize = { width: PLATE, height: PLATE };
   }
 }
@@ -185,81 +194,87 @@ class MandelbrotCoreShort extends Scene {
   }
 
   override construct(): void {
-    const plate = this.add(new MandelbrotCorePlate(), { at: [0, 0.25] });
+    const plate = this.add(new MandelbrotCorePlate(), { at: [0, 0.2] });
     const title = this.add(
-      Label("BUILDING THE\nMANDELBROT SET")
-        .height(0.58)
+      Label("Mandelbrot set")
+        .height(0.42)
         .color(INK)
         .depthMode("overlay")
-        .css({ fontWeight: 900, lineHeight: 1.02, letterSpacing: "-0.035em", textAlign: "center" }),
-      { at: [0, 6.55] },
+        .css({ fontWeight: 700, letterSpacing: "-0.03em", textAlign: "center" }),
+      { at: [0, 6.9] },
     );
     const rule = this.add(
-      Label("Start with z = 0  •  Repeat z² + c\nNine passes reveal what never escapes")
-        .height(0.23)
+      Label("Points are colored by how fast they escape")
+        .height(0.24)
         .color(MUTED)
         .depthMode("overlay")
-        .css({ fontWeight: 650, lineHeight: 1.4, textAlign: "center" }),
-      { at: [0, 5.55] },
+        .css({ fontWeight: 500, textAlign: "center" }),
+      { at: [0, 6.28] },
     );
-    const endScrim = this.add(
-      Rectangle().size([9, 16]).fill(BG).opacity(0).layer(50).depthMode("overlay"),
-    );
-    const endTitle = this.add(
-      Label("KEEP EXPLORING")
-        .height(0.42)
-        .color(CYAN)
-        .opacity(0)
-        .layer(60)
-        .depthMode("overlay")
-        .css({ fontWeight: 900, letterSpacing: "0.09em" }),
-      { at: [0, 3.05] },
-    );
+    const dots = PASSES.flatMap((_, index) => {
+      const x = (index - (PASSES.length - 1) / 2) * 0.46;
+      const dim = this.add(
+        Circle().radius(0.075).fill(DIM).depthMode("overlay").layer(40),
+        { at: [x, -3.85] },
+      );
+      const lit = this.add(
+        Circle().radius(0.075).fill(index === PASSES.length - 1 ? GOLD : CYAN).opacity(index === 0 ? 1 : 0).depthMode("overlay").layer(41),
+        { at: [x, -3.85] },
+      );
+      return [dim, lit];
+    });
+    const marks = dots.filter((_, index) => index % 2 === 1);
     const subscribe = this.add(
       YouTubeSubscribe("Kavriq", {
         handle: "@kavriq",
         message: "Subscribe for more visual stories",
         layout: "compact",
-        size: [5.4, 3.8],
-      }).opacity(0).layer(60),
-      { at: [0, 0] },
+        size: [5.2, 3.5],
+      }).opacity(0).layer(60).depthMode("overlay"),
+      { at: [0, -0.7] },
     );
 
     this.play(timeline((t) => {
-      t.animate(title).duration(0.65).typewrite();
-      t.animate(rule).at(0.35).duration(0.55).appear();
-      t.animate([title, rule]).at(1.45).stagger(0.06).duration(0.38).disappear();
+      t.animate(title).duration(0.01).revealText(1, 1);
+      t.animate(rule).duration(0.01).revealText(1, 1);
+      t.animate(title).at(0.05).duration(0.4).appear();
+      t.animate(rule).at(0.16).duration(0.35).appear();
+      let cursor = HOLDS[0]!;
+      let frameStart = cursor;
+      for (let index = 1; index < PASSES.length; index += 1) {
+        if (PASSES[index] === 16) frameStart = cursor;
+        t.animate(plate).at(cursor).duration(CARVES[index]!).ease("inOutSine").to({ iterations: PASSES[index]! });
+        t.animate(marks[index]!).at(cursor).duration(CARVES[index]!).ease("inOutSine").fadeTo(1);
+        cursor += CARVES[index]! + HOLDS[index]!;
+      }
+      const frameDuration = cursor - HOLDS[HOLDS.length - 1]! - frameStart;
+      t.animate(plate).at(frameStart).duration(frameDuration).ease("inOutCubic").to({ frame: 1 });
+      t.wait(cursor);
     }));
-
     this.play(timeline((t) => {
-      t.animate(plate).duration(1.25).ease("outCubic").to({ reveal: 1 });
-
-      DEPTHS.forEach((depth, index) => {
-        const start = index * BUILD_STEP;
-        t.animate(plate)
-          .at(start)
-          .duration(index === 0 ? 0.2 : BUILD_STEP * 0.72)
-          .ease("linear")
-          .to({ iterations: depth });
-      });
-      t.wait(DEPTHS.length * BUILD_STEP + 0.55);
+      t.animate(plate).duration(DIVE).ease("outCubic").to({ zoom: 0.7 });
+      t.animate(plate).at(DIVE).duration(CREEP).ease("inOutSine").to({ zoom: 1 });
+      t.animate(plate).at(DIVE + CREEP).duration(PULL).ease("inOutCubic").to({ zoom: 0 });
+      t.wait(DIVE + CREEP + PULL + ADMIRE);
     }));
-
     this.play(timeline((t) => {
-      t.animate(plate).duration(6.2).ease("inOutCubic").to({ zoom: 1 });
+      t.animate(title).duration(UNTYPE).ease("outCubic").untypewrite();
+      t.animate(rule).duration(UNTYPE * 0.84).ease("outCubic").untypewrite();
+      for (const dot of dots) t.animate(dot).duration(UNTYPE).fadeTo(0);
     }));
-
     this.play(timeline((t) => {
-      t.animate(endScrim).duration(0.5).appear();
-      t.animate(endTitle).at(0.28).duration(0.5).appear();
+      t.animate(plate).duration(SHRINK).ease("inOutCubic").scaleTo(0.66);
+    }));
+    this.play(timeline((t) => {
+      t.animate(plate).duration(LIFT).ease("inOutCubic").moveTo([0, 4.35]);
     }));
     this.play(YouTubeSubscribeSequence(subscribe, {
-      entranceDuration: 0.55,
-      subscribeAt: 0.85,
-      bellAt: 1.45,
+      entranceDuration: 0.6,
+      subscribeAt: 0.95,
+      bellAt: 1.6,
       actionDuration: 0.45,
     }));
-    this.wait(1.2);
+    this.wait(2.5);
   }
 }
 
@@ -269,7 +284,7 @@ const sourcePath = (relativePath: string): string =>
     : relativePath;
 
 render(import.meta.url, MandelbrotCoreShort, {
-  output: sourcePath("../output/fractal-mandelbrot-core-short.mp4"),
+  output: sourcePath("../output/mandelbrot-core.mp4"),
   fps: 30,
   audio: {
     source: sourcePath("../../resources/audio/raag-pahadi.mp3"),

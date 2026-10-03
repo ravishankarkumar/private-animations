@@ -15,7 +15,11 @@
     "render:fractal:tree": "npm run build:murali && tsx fractal-shorts/recursive-tree.ts",
     "render:fractal:mandelbrot": "npm run build:murali && tsx fractal-shorts/mandelbrot.ts",
     "render:fractal:mandelbrot-core": "npm run build:murali && tsx fractal-shorts/mandelbrot-core.ts",
+    "render:fractal:mandelbrot-core-grok": "npm run build:murali && tsx fractal-shorts/mandelbrot-core-grok.ts",
     "render:fractal:sine-ring": "npm run build:murali && tsx fractal-shorts/sine-ring.ts",
+    "render:fractal:mandelbulb": "npm run build:murali && tsx fractal-shorts/mandelbulb.ts",
+    "render:fractal:pi-arms": "npm run build:murali && tsx fractal-shorts/pi-arms.ts",
+    "render:logo:visionforbharat": "npm run build:murali && tsx logos/visionforbharat.ts",
     "render:fractals": "npm run build:murali && tsx fractal-shorts/koch-snowflake.ts && tsx fractal-shorts/sierpinski-triangle.ts && tsx fractal-shorts/recursive-tree.ts && tsx fractal-shorts/mandelbrot.ts",
     "typecheck": "tsc --noEmit"
   },
@@ -24,6 +28,7 @@
     "three": "^0.180.0"
   },
   "devDependencies": {
+    "@types/three": "^0.180.0",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   }
