@@ -1,7 +1,7 @@
 import { render } from "murali-js";
 import { YouTubeSubscribe, YouTubeSubscribeSequence } from "murali-js/composite";
 import { Scene, Tattva, timeline, type TattvaState } from "murali-js/core";
-import { Label } from "murali-js/text";
+import { Label, MathText } from "murali-js/text";
 
 const BG = "#040812";
 const INK = "#F4FBFF";
@@ -102,25 +102,6 @@ class SineRingPlate extends Tattva<SineRingState> {
   }
 }
 
-class SineRingFormula extends Tattva {
-  constructor() {
-    super();
-    this.worldFontSize = 0.32;
-    this.worldSize = { width: 4.7, height: 0.56 };
-  }
-
-  override contentHTML(): string {
-    return `<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" style="color:${INK}">
-      <mrow>
-        <mi>r</mi><mo>=</mo><mn>4</mn>
-        <mi mathvariant="normal">sin</mi><mo>(</mo>
-        <mfrac><mrow><mn>24</mn><mi>θ</mi></mrow><mn>25</mn></mfrac>
-        <mo>)</mo><mo>+</mo><mn>10</mn>
-      </mrow>
-    </math>`;
-  }
-}
-
 class SineRingShort extends Scene {
   constructor() {
     super({ frame: "portrait", background: BG, fps: 30 });
@@ -136,7 +117,9 @@ class SineRingShort extends Scene {
       { at: [0, 6.9] },
     );
     const rule = this.add(
-      new SineRingFormula(),
+      MathText(String.raw`r = 4\sin\left(\frac{24\theta}{25}\right) + 10`)
+        .height(0.32)
+        .color(INK),
       { at: [0, 6.18] },
     );
     const subscribe = this.add(
