@@ -7,11 +7,21 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "render:agent": "tsx mute-animations/agent.ts",
+    "build:murali": "npm --prefix ../../murali-js run build",
+    "render:agent": "npm run build:murali && tsx mute-animations/agent.ts",
+    "render:llm": "npm run build:murali && tsx mute-animations/llm-next-token.ts",
+    "render:fractal:koch": "npm run build:murali && tsx fractal-shorts/koch-snowflake.ts",
+    "render:fractal:sierpinski": "npm run build:murali && tsx fractal-shorts/sierpinski-triangle.ts",
+    "render:fractal:tree": "npm run build:murali && tsx fractal-shorts/recursive-tree.ts",
+    "render:fractal:mandelbrot": "npm run build:murali && tsx fractal-shorts/mandelbrot.ts",
+    "render:fractal:mandelbrot-core": "npm run build:murali && tsx fractal-shorts/mandelbrot-core.ts",
+    "render:fractal:sine-ring": "npm run build:murali && tsx fractal-shorts/sine-ring.ts",
+    "render:fractals": "npm run build:murali && tsx fractal-shorts/koch-snowflake.ts && tsx fractal-shorts/sierpinski-triangle.ts && tsx fractal-shorts/recursive-tree.ts && tsx fractal-shorts/mandelbrot.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "murali-js": "github:murali-engine/murali-js"
+    "murali-js": "file:../../murali-js",
+    "three": "^0.180.0"
   },
   "devDependencies": {
     "tsx": "^4.20.5",
