@@ -124,7 +124,7 @@ That brings us to machine learning.
 
 ## 5. Machine Learning: Learning Patterns From Data
 
-**Approx. 3:45–6:15**
+**Approx. 3:45–6:30**
 
 **[Visual]** Return to the email example. On the left, show labeled messages: **Spam** and **Not Spam**. Feed them through a simple training pipeline into a model card. On the right, send one new email into the trained model and reveal: **Spam probability: 96%**.
 
@@ -172,11 +172,21 @@ Data science is an adjacent discipline that uses data to produce insight and sup
 
 A data scientist might analyze millions of emails to understand how spam changes over time. Our AI system uses a trained model to act on the next email that arrives. The two areas overlap through machine learning, but neither is simply a subset of the other.
 
+**[Visual]** As the two workspaces collapse back into the main map, display a small, unobtrusive **Subscribe for more visual technology explainers** prompt in the lower third. Keep the conceptual map visible.
+
+**[Murali direction]** Animate the prompt with a short write-on or gentle upward reveal. Do not pause the main composition, trigger a full-screen transition, or use a notification-bell animation.
+
+**[Host]**
+
+If this map is already making these terms easier to understand, consider subscribing. We make visual explanations of the technologies that are shaping how we work and live.
+
+Now let’s open up that ML model and see what makes deep learning different.
+
 ---
 
 ## 6. Deep Learning: Learning Representations in Layers
 
-**Approx. 6:15–8:25**
+**Approx. 6:30–8:40**
 
 **[Visual — One continuous neural-network sequence]** Transform the ML model card from the previous section into a simplified network with an **Input layer**, several **Hidden layers**, and an **Output layer**. Use the same network for the entire explanation:
 
@@ -213,7 +223,7 @@ Once training is complete, inference is much simpler. A new email attachment mov
 
 ## 7. Generative AI: From Predicting Labels to Producing Content
 
-**Approx. 8:25–9:45**
+**Approx. 8:40–10:00**
 
 **[Visual]** Divide the frame into two panels. A discriminative model receives an email and outputs **Spam: 96%**. A generative model receives the same email plus the instruction **Draft a polite reply** and produces text token by token.
 
@@ -237,7 +247,7 @@ Generative AI itself is not brand new. Researchers have studied generative model
 
 ## 8. Foundation Models and Large Language Models
 
-**Approx. 9:45–11:10**
+**Approx. 10:00–11:25**
 
 **[Visual]** Many data cards flow into one large **Foundation Model** block. Bring back the same email and branch it into several tasks: **Summarize the thread**, **Classify urgency**, **Extract the meeting date**, **Translate**, and **Draft a reply**. Then zoom into the language-focused model and label it **Large Language Model**.
 
@@ -267,7 +277,7 @@ And not every foundation model is an LLM. Other foundation models operate on ima
 
 ## 9. Capabilities, Limitations, and Responsible Use
 
-**Approx. 11:10–12:15**
+**Approx. 11:25–12:30**
 
 **[Visual]** Return to the drafted email reply. The source email says the meeting is on **Tuesday at 10:00**, but the generated reply confidently says **“See you Wednesday at 10:00.”** Highlight the mismatch, correct it, and then expand into a compact two-column layout:
 
@@ -290,7 +300,7 @@ The goal is not to treat AI as magic or dismiss it as mere autocomplete. It is t
 
 ## 10. Recap: Five Terms, One Map
 
-**Approx. 12:15–13:40**
+**Approx. 12:30–13:55**
 
 **[Visual]** Return to the complete map, then place five concise labels beside it:
 
@@ -320,7 +330,9 @@ They are related, but they are not interchangeable.
 
 Once you separate the field, the learning method, the architecture, the reusable foundation, and the capability, the vocabulary becomes much easier to navigate—and the technology becomes much easier to evaluate clearly.
 
-If this explanation helped, subscribe for more visual breakdowns of the technology shaping the world. And tell me in the comments: which AI concept should we unpack next?
+If this explanation gave you a clearer map of the AI landscape, subscribe for more visual breakdowns of the technology shaping the world.
+
+And tell me in the comments: which part should we unpack next—training, neural networks, foundation models, or generative AI? Your answer may become the next video.
 
 ---
 
