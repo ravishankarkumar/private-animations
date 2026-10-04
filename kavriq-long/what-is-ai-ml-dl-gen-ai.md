@@ -10,34 +10,29 @@
 
 ---
 
-## 1. Hook: Four Systems, Four Different Jobs
+## 1. Hook: AI Takes Center Stage
 
 **Approx. 0:00–0:45**
 
-**[Visual]** A single email arrives at the center of the screen. Four actions appear around it, one at a time:
+**[Visual]** Open with a fast-moving newspaper and digital-headline montage. Headlines about chatbots, AI assistants, generated images, automation, deepfakes, and new models slide, stack, and briefly compete for attention. The montage accelerates until individual words break away from the headlines: **AI**, **Machine Learning**, **Deep Learning**, **Neural Network**, **Foundation Model**, **LLM**, and **Generative AI**.
 
-1. A rule-based expert system evaluates hand-written fraud indicators.
-2. A spam filter assigns a probability.
-3. A neural network recognizes the attached image.
-4. An assistant drafts a reply.
-
-**[Murali direction]** Build this as a reusable email card in the center with four surrounding action cards. Draw a connector to each card as it is introduced. End by pulling the camera back so all four actions are visible together.
+**[Murali direction]** Build the montage from reusable headline cards on several depth planes. Use quick lateral moves and restrained camera pushes rather than continuous spinning. As the narration turns to confusion, dim the headlines and pull the terminology into a crowded cluster at the center. Resolve the clutter by fading everything except the five terms used in the conceptual map.
 
 **[Host]**
 
-Imagine an email arriving in your inbox.
+Artificial intelligence has taken center stage.
 
-One system follows hand-written rules to decide whether the message looks suspicious. Another has learned from many examples and predicts whether the message is spam. A third recognizes what is inside an attached image. And a fourth writes a possible reply for you.
+It is in the news, inside the products we use, and increasingly part of how people work, learn, and create. Every new breakthrough draws more people into the conversation.
 
-All four might be described as artificial intelligence. But they are not the same kind of system.
+But it also seems to introduce another term: artificial intelligence, machine learning, deep learning, neural networks, foundation models, large language models, and generative AI.
 
-So what exactly separates artificial intelligence, machine learning, deep learning, and generative AI? And where do terms like neural network, foundation model, and large language model fit?
+They are often used as though they mean the same thing. They do not. Some describe a broad field, some describe ways of building systems, and others describe what those systems can do.
 
-Let’s build the map one layer at a time.
+In this video, we will organize that vocabulary into one clear map—and then use a familiar example to understand what each term really means.
 
 ---
 
-## 2. The Map Before the Journey
+## 2. The High-Level Map
 
 **Approx. 0:45–1:25**
 
@@ -59,13 +54,38 @@ Artificial intelligence is the broad field. Machine learning is one approach wit
 
 Generative AI is slightly different: it describes what a system can do—generate new content—not simply where it sits in a neat hierarchy. Most of today’s generative AI is powered by deep learning, but generative methods are older than the current wave of neural networks.
 
-Keep this map in mind. We will return to it as each idea becomes clearer.
+That is the high-level relationship. But a diagram can only take us so far. To understand what these categories mean in practice, we need to look more closely at how different systems solve the same familiar problem.
 
 ---
 
-## 3. Artificial Intelligence: The Broad Goal
+## 3. One Inbox, Four Different Systems
 
-**Approx. 1:25–2:30**
+**Approx. 1:25–2:05**
+
+**[Visual]** A single email arrives at the center of the screen. Four actions appear around it, one at a time:
+
+1. A rule-based expert system evaluates hand-written fraud indicators.
+2. A spam filter assigns a probability.
+3. A neural network recognizes the attached image.
+4. An assistant drafts a reply.
+
+**[Murali direction]** Build this as a reusable email card in the center with four surrounding action cards. Draw a connector to each card as it is introduced. End by pulling the camera back so all four actions are visible together. Preserve these objects so they can be reused in the detailed sections and final recap.
+
+**[Host]**
+
+Imagine an email arriving in your inbox.
+
+One system follows hand-written rules to decide whether the message looks suspicious. Another has learned from many examples and predicts whether the message is spam. A third recognizes what is inside an attached image. And a fourth writes a possible reply for you.
+
+All four might be described as artificial intelligence. But they are not the same kind of system.
+
+We will use this inbox to unpack the map, beginning with its broadest category: artificial intelligence.
+
+---
+
+## 4. Artificial Intelligence: The Broad Goal
+
+**Approx. 2:05–3:05**
 
 **[Visual]** Zoom into the AI region. Arrange example cards around the label: **Reasoning**, **Planning**, **Perception**, **Language**, and **Learning**. Then show a short timeline: 1950s research → expert systems → machine learning → modern generative systems.
 
@@ -87,9 +107,9 @@ That brings us to machine learning.
 
 ---
 
-## 4. Machine Learning: Learning Patterns From Data
+## 5. Machine Learning: Learning Patterns From Data
 
-**Approx. 2:30–4:15**
+**Approx. 3:05–4:45**
 
 **[Visual]** Return to the email example. On the left, show labeled messages: **Spam** and **Not Spam**. Feed them through a simple training pipeline into a model card. On the right, send one new email into the trained model and reveal: **Spam probability: 96%**.
 
@@ -123,9 +143,9 @@ Across these approaches, machine learning can classify images, predict demand, r
 
 ---
 
-## 5. Deep Learning: Learning Representations in Layers
+## 6. Deep Learning: Learning Representations in Layers
 
-**Approx. 4:15–5:35**
+**Approx. 4:45–6:00**
 
 **[Visual]** An email attachment enters a simplified neural network. Early layers respond to edges and textures; later layers assemble shapes; the final layer produces **Dog: 98%**. Keep the illustration abstract rather than depicting a biological brain.
 
@@ -147,9 +167,9 @@ But these models can be difficult to interpret. Their outputs emerge from comple
 
 ---
 
-## 6. Generative AI: From Predicting Labels to Producing Content
+## 7. Generative AI: From Predicting Labels to Producing Content
 
-**Approx. 5:35–6:55**
+**Approx. 6:00–7:15**
 
 **[Visual]** Divide the frame into two panels. A discriminative model receives an email and outputs **Spam: 96%**. A generative model receives the same email plus the instruction **Draft a polite reply** and produces text token by token.
 
@@ -171,9 +191,9 @@ Generative AI itself is not brand new. Researchers have studied generative model
 
 ---
 
-## 7. Foundation Models and Large Language Models
+## 8. Foundation Models and Large Language Models
 
-**Approx. 6:55–8:10**
+**Approx. 7:15–8:25**
 
 **[Visual]** Many data cards flow into one large **Foundation Model** block. From that block, branches lead to **Summarize**, **Classify**, **Answer**, **Extract**, and **Generate**. Then zoom into the language branch and label it **Large Language Model**.
 
@@ -201,9 +221,9 @@ And not every foundation model is an LLM. Other foundation models operate on ima
 
 ---
 
-## 8. Capabilities, Limitations, and Responsible Use
+## 9. Capabilities, Limitations, and Responsible Use
 
-**Approx. 8:10–9:10**
+**Approx. 8:25–9:20**
 
 **[Visual]** A balanced two-column layout:
 
@@ -226,9 +246,9 @@ The goal is not to treat AI as magic or dismiss it as mere autocomplete. It is t
 
 ---
 
-## 9. Recap: Field, Method, Architecture, Capability
+## 10. Recap: Field, Method, Architecture, Capability
 
-**Approx. 9:10–10:00**
+**Approx. 9:20–10:20**
 
 **[Visual]** Return to the complete map, then place four concise labels beside it:
 
