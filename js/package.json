@@ -10,6 +10,8 @@
     "build:murali": "npm --prefix ../../murali-js run build",
     "render:agent": "npm run build:murali && tsx mute-animations/agent.ts",
     "render:llm": "npm run build:murali && tsx mute-animations/llm-next-token.ts",
+    "render:embedding": "npm run build:murali && tsx mute-animations/word-embedding-map.ts",
+    "render:trig": "npm run build:murali && tsx mute-animations/trig-three-graphs.ts",
     "render:fractal:koch": "npm run build:murali && tsx fractal-shorts/koch-snowflake.ts",
     "render:fractal:sierpinski": "npm run build:murali && tsx fractal-shorts/sierpinski-triangle.ts",
     "render:fractal:tree": "npm run build:murali && tsx fractal-shorts/recursive-tree.ts",

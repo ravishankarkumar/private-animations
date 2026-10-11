@@ -1,0 +1,25 @@
+{
+  "name": "kavriq-what-is-ai-ml-dl-genai",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:deps": "npm --prefix ../../../murali-js run build --silent && npm --prefix ../../../murali-scene-kit-js run build --silent",
+    "typecheck": "tsc --noEmit",
+    "render": "tsx",
+    "render:all": "tsx scripts/render-all.ts",
+    "render:master": "tsx scripts/render-master.ts",
+    "render:complete": "npm run render:all && npm run render:master"
+  },
+  "dependencies": {
+    "murali-js": "file:../../../murali-js",
+    "murali-scene-kit": "file:../../../murali-scene-kit-js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
