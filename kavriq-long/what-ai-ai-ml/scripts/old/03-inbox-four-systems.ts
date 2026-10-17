@@ -1,10 +1,10 @@
 import { Scene, Timeline, type Tattva, type Vec2 } from "murali-js/core";
 import { Rectangle } from "murali-js/primitives";
 import { Label } from "murali-js/text";
-import { COLOR, FRAME } from "./lib/theme.ts";
-import { addArrow } from "./lib/ui.ts";
-import { addOpenEmailView } from "./lib/open-email.ts";
-import { renderScene } from "./lib/render.ts";
+import { COLOR, FRAME } from "../lib/theme.ts";
+import { addArrow } from "../lib/ui.ts";
+import { addOpenEmailView } from "../lib/open-email.ts";
+import { renderScene } from "../lib/render.ts";
 
 const SOLID = {
   ai: "#17647D",

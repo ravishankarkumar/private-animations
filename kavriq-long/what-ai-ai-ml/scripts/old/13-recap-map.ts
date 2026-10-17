@@ -1,9 +1,9 @@
 import { Scene, Timeline } from "murali-js/core";
 import { Circle } from "murali-js/primitives";
 import { Label } from "murali-js/text";
-import { ALPHA, COLOR, FRAME } from "./lib/theme.ts";
-import { addCard, addHeading, addLine, addPill } from "./lib/ui.ts";
-import { renderScene } from "./lib/render.ts";
+import { ALPHA, COLOR, FRAME } from "../lib/theme.ts";
+import { addCard, addHeading, addLine, addPill } from "../lib/ui.ts";
+import { renderScene } from "../lib/render.ts";
 
 class RecapMapScene extends Scene {
   constructor() {

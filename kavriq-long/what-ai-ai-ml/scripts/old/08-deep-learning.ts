@@ -2,9 +2,9 @@ import { NeuralNetwork, neuralNetwork } from "murali-js/ai";
 import { Scene, Timeline } from "murali-js/core";
 import { Circle } from "murali-js/primitives";
 import { Label } from "murali-js/text";
-import { COLOR, FRAME } from "./lib/theme.ts";
-import { addHeading, addPill } from "./lib/ui.ts";
-import { renderScene } from "./lib/render.ts";
+import { COLOR, FRAME } from "../lib/theme.ts";
+import { addHeading, addPill } from "../lib/ui.ts";
+import { renderScene } from "../lib/render.ts";
 
 class DeepLearningScene extends Scene {
   constructor() {
@@ -12,7 +12,7 @@ class DeepLearningScene extends Scene {
   }
 
   override construct(): void {
-    const heading = addHeading(this, "DEEP LEARNING", "Forward pass → error → backward update → inference");
+    const heading = addHeading(this, "DEEP LEARNING", "Machine learning using neural networks with many layers");
     const model = neuralNetwork([
       { id: "input", label: "Pixels", nodes: ["x₁", "x₂", "x₃"] },
       { id: "hidden1", label: "Edges", nodes: ["h₁", "h₂", "h₃", "h₄"], activation: "ReLU" },

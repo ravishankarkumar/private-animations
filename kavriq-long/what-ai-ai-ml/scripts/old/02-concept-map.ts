@@ -1,9 +1,9 @@
 import { Scene, Timeline } from "murali-js/core";
 import { Circle, Rectangle } from "murali-js/primitives";
 import { Label } from "murali-js/text";
-import { ALPHA, COLOR, FRAME } from "./lib/theme.ts";
-import { addHeading, nodesAndEdges } from "./lib/ui.ts";
-import { renderScene } from "./lib/render.ts";
+import { ALPHA, COLOR, FRAME } from "../lib/theme.ts";
+import { addHeading, nodesAndEdges } from "../lib/ui.ts";
+import { renderScene } from "../lib/render.ts";
 
 class ConceptMapScene extends Scene {
   constructor() {

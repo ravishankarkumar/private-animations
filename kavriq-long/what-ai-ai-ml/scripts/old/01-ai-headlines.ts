@@ -1,8 +1,8 @@
 import { Newspaper, NewspaperOpening } from "murali-js/storytelling";
 import { Scene, Timeline } from "murali-js/core";
 import { Label } from "murali-js/text";
-import { COLOR, FRAME } from "./lib/theme.ts";
-import { renderScene } from "./lib/render.ts";
+import { COLOR, FRAME } from "../lib/theme.ts";
+import { renderScene } from "../lib/render.ts";
 
 class AIHeadlinesScene extends Scene {
   constructor() {

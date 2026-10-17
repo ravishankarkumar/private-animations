@@ -1,8 +1,8 @@
 import { Scene, Timeline } from "murali-js/core";
 import { Label } from "murali-js/text";
-import { COLOR, FRAME } from "./lib/theme.ts";
-import { addArrow, addCard, addEmailMessage, addHeading, addPill } from "./lib/ui.ts";
-import { renderScene } from "./lib/render.ts";
+import { COLOR, FRAME } from "../lib/theme.ts";
+import { addArrow, addCard, addEmailMessage, addHeading, addPill } from "../lib/ui.ts";
+import { renderScene } from "../lib/render.ts";
 
 class GenerativeAIComparisonScene extends Scene {
   constructor() {
@@ -10,7 +10,7 @@ class GenerativeAIComparisonScene extends Scene {
   }
 
   override construct(): void {
-    const heading = addHeading(this, "DISCRIMINATIVE VS GENERATIVE", "Predict a label—or produce a new sample");
+    const heading = addHeading(this, "GENERATIVE AI", "Create a new output instead of only choosing a label");
     const email = addEmailMessage(this, [0, 1.45], 0.58);
     const left = addCard(this, {
       title: "Discriminative model", subtitle: "Choose or predict a category", detail: "Is this email spam?",

@@ -27,6 +27,21 @@ Edutainment checks before a line stays:
 - The wrong reply remains the reason the video is moving.
 - A second with no narration is written into the animation plan as a specific beat. Unscored silence gets cut.
 
+### Clarity spine
+
+Every major term has two levels. First, one short sentence must land even if the viewer remembers nothing else. Then the animation opens the mechanism and adds depth. The depth beat may enrich the takeaway, but it must not be required to understand the next section.
+
+Give each takeaway a clean visual moment in its stable concept color. Finish speaking the sentence before the mechanism starts moving. Then keep a shortened version docked as the section label instead of repeating the definition.
+
+- **AI:** “AI is the broad goal. Learning is optional.”
+- **ML:** “Machine learning is one way to build AI: it learns patterns from examples.”
+- **DL:** “Deep learning is machine learning using neural networks with many layers.”
+- **Foundation model:** “One broadly trained model can support many jobs.”
+- **Generative AI:** “Generative AI creates a new output instead of only choosing a label.”
+- **LLM:** “An LLM is a language model that generates one token at a time.”
+
+These are the six load-bearing sentences. Keep their wording plain and their screen time uncluttered. Supporting terms such as parameters, weights, inference, multimodal, and hallucination belong to the depth layer.
+
 ### Stable Concept Palette
 
 Use this palette consistently. A concept keeps the same hue on the email cards, the map regions, the network, the tokens, and the final snap-back.
@@ -78,13 +93,13 @@ On "One flagged the warning signs," reveal the **FLAGGED** card and draw three a
 
 When the narration talks about the Tuesday–Wednesday miss, the Tue → Wed pill will appear.
 
-When the narration starts talking about multiple AI technologies, the email card will move toward the left. The four cards — **FLAGGED**, **Spam probability: 96%**, **Dog: 98%**, and **DRAFT** — will shift vertically, above and below the email card, leaving empty space on the right.
+When the narration says the email hides several commonly confused AI terms, the email card will move toward the left. The four cards — **FLAGGED**, **Spam probability: 96%**, **Dog: 98%**, and **DRAFT** — will shift vertically, above and below the email card, leaving empty space on the right.
 
 On the right, those AI terms will be written one by one.
 
 On the last line, lift **TUE → WED** off the reply and lock it to the top-right corner of the screen. It stays screen-fixed through later camera moves. Leave the reply pink. At the same time, show the dim term legend in the opposite corner. Do not light any name yet. Section 7 corrects the reply and clears the chip.
 
-While the host says "next 9 to 10 minutes," the AI terms will be deleted, and the Tue → Wed pill will move to the top-right corner of the screen.
+On "Let's separate them," clear the temporary AI terms. The corner chip and dim legend remain.
 
 **[Host]**
 
@@ -95,7 +110,9 @@ One gave it a 96 percent spam score.
 One recognized the dog in the attachment.  
 And one wrote this draft reply. By the way, you can notice that it wrote the wrong day. It saw Tuesday and still wrote Wednesday.
 
-Multiple AI technologies, including AI, ML, neural networks, deep learning, LLMs, and generative AI, were put to use when this email arrived. But what exactly are these technologies, how do they work, and how are they different from each other? That is what this video will explain over the next 9 to 10 minutes.
+That one email hides several terms people often mix up: AI, machine learning, deep learning, LLMs, and generative AI.
+
+They are related. They are not interchangeable. Let's separate them.
 
 ---
 
@@ -107,9 +124,11 @@ Multiple AI technologies, including AI, ML, neural networks, deep learning, LLMs
 
 Zoom the cyan **Rule-based AI** card. Keep the three arrows from the cold open: unknown **From** line, **URGENT** subject, and confirmation link, all pointing into the **FLAGGED** card. Check those three in spoken order. Then reveal the **No learning** chip on "never learned." Use rigid checkmarks and straight movement. The body still reads **Tuesday at 10:00** the whole time. No arrow comes from the Tuesday line or the dog.
 
-Delete all the arrowd to Flagged. -> Move it towards right, and simultaneously change teh text to Artificial Intelligence.Aftet a while camera will zoom out, and card will settle in screen adjacent to and right of the current screen dimension. The card will become bigger With artificial Intelligence written near the top. In next segments, other cards will appear here.
+Delete the arrows leading to **FLAGGED**. Move the card to the right and change its title to **Artificial Intelligence**. As the camera pulls back, let it settle into the adjacent map area and expand into the outer AI region. Later concept regions will appear inside or across this area.
 
-After the artifical intelligence card is drawn, the narrator/host face reveal camera footage will show up.
+Before the card becomes the permanent cyan AI region, give the takeaway its own uncluttered beat: **AI is the broad goal. Learning is optional.** Finish the spoken sentence before the examples begin. Light **AI** in the legend, then shorten the docked label to **AI · broad goal**.
+
+After the Artificial Intelligence region is drawn, reveal the narrator on camera. On the chess and loan line, flash two small cyan cards beside the region, **Classical chess search** and **Loan expert system**, hold them for "for decades," then clear them.
 
 **[Host]**
 
@@ -121,12 +140,12 @@ Please note that the system is not learning. In fact, it has never learned. This
 
 This is still artificial intelligence.
 
-AI is the broad goal: make computers perform tasks we associate with intelligence.
+AI is the broad goal. Learning is optional.
+
+The goal is to make computers perform tasks we associate with intelligence.
 
 <!-- The narrators face appears here -->
-The learning part is optional.
-
-A classical chess program using hand-designed algorithms, or a loan expert system that performs a set of eligibility checks, is also AI. Neither one learns.
+A classical chess program using hand-designed algorithms, or a loan expert system that performs a set of eligibility checks, is also AI. Neither one learns. Systems like these were AI for decades before a model learned from examples.
 
 But the rule-based system has one flaw. It can't deal with unknowns. Let's say the spammers realized those rules, and they started being careful about those rules. The system will stop flagging the emails that should be flagged.
 
@@ -142,11 +161,13 @@ How do we overcome this limitation? Well, that is our next topic.
 
 Move that card to a workspace above the email. Zoom out, then zoom into the workspace. The card splits into two phases, **Training** and **Inference**.
 
+Before the split, give the green takeaway one clean beat: **Machine learning is one way to build AI: it learns patterns from examples.** Finish the sentence, light **ML** in the legend, dock **ML · learns from examples** above the workspace, and only then split into **Training** and **Inference**.
+
 During training, many small email cards labeled **Spam** or **Not spam** flow into a meter. The meter keeps adjusting. When training ends, the meter becomes an array of numbers, and that array remains. On "parameters," label the array **Parameters**.
 
 During inference, send this email in. The numbers stay fixed. Reveal **Spam probability: 96%** on "96 percent." Then show the compact line **Training: learn the parameters** versus **Inference: use the parameters**. Freeze the green card. Do not turn it into a neural network.
 
-Clear the training workspace: the small emails, the meter, and the split phase cards. Keep the email, the Artificial Intelligence card, and the spam result. Move the machine-learning card onto the right-hand screen, inside the Artificial Intelligence card. On "Machine learning," it expands through that card's inner area, leaving a 4–6 pixel `#070A16` gutter, and the spam card drops into the green area. Light **ML** in the legend.
+Clear the training workspace: the small emails, the meter, and the split phase cards. Keep the email, the Artificial Intelligence card, and the spam result. Move the machine-learning card onto the right-hand screen, inside the Artificial Intelligence card. As the workspace clears, it expands through that card's inner area, leaving a 4–6 pixel `#070A16` gutter, and the spam card drops into the green area. **ML** is already lit in the legend from the opening takeaway.
 
 On "Data science," draw a solid slate **Data science** region, `#677585`, that overlaps part of the green machine-learning region and also crosses outside the outer AI boundary. Use the `#070A16` gutter where the slate crosses the cyan edge. The overlap is the solid dark cyan `#123744`, not a transparent blend. In the slate area beyond the AI boundary, mark **Collect**, **Clean**, **Analyze**, and **Communicate**. Leave part of the green region outside the slate region. An analyst can sit in the slate region. Do not park the whole slate region inside the cyan region, do not park the analyst entirely outside, and do not make a chart the whole definition. Light **Data science** in the legend while that region is on screen. Clear the region before "This spam model reads the message fields." No second workspace scene. The legend item stays lit.
 
@@ -154,7 +175,11 @@ The subscribe lower-third plays on the section's last line, after the exclusion.
 
 **[Host]**
 
-A system that learns can overcome that limitation. Spam detection here uses older emails that were reliably marked spam or not spam. Those emails were used to train a model.
+A system that learns can overcome that limitation.
+
+Machine learning is one way to build AI: it learns patterns from examples.
+
+Here, the examples are older emails that were reliably marked spam or not spam. Those emails were used to train a model.
 
 Training changes the internal numbers inside the model from those correctly tagged examples, until the model starts to predict new emails reliably.
 
@@ -165,8 +190,6 @@ Once the new email arrives, those numbers stay fixed. The model scores it: "Spam
 Learning the numbers is training. Using the numbers is inference.
 
 People still pick the emails, the goal, and the test. The model does not invent the job.
-
-Machine learning.
 
 Data science can use machine learning. It also includes collecting, cleaning, analyzing, and communicating data. Machine learning is also used outside data science. Neither field contains the other.
 
@@ -187,6 +210,8 @@ If this is landing, subscribe. More visual explainers are on the way.
 **[Animation plan — one continuous neural-network sequence]** The email stays on the main screen, and dog-photo.jpg stays attached. The Artificial Intelligence card stays on the right, with the green machine-learning area and the spam card inside it. The **Dog: 98%** card is still in the vertical stack beside the email, darkened since segment 2. On the opening line, brighten that card. Leave the spam card green. Leave the draft card dark. Do not turn the spam card into a network, and do not lift the attachment off the email.
 
 Move the dog card to the workspace above the email. Zoom out, then zoom into the workspace. The card becomes a violet network with an **Input layer**, hidden layers, and an **Output layer**. Draw representative connections only. Show stronger weights with thicker, brighter lines. No brain icon. On "a number," reuse the parameter array from segment 3, now sitting on the connections. Label it **Weights**.
+
+Before the network starts training, give the violet takeaway one clean beat: **Deep learning is machine learning using neural networks with many layers.** Finish the sentence, light **DL** in the legend, dock **DL · layered neural networks**, and then reveal the weights and training loop.
 
 Run one camera and one network:
 
@@ -211,13 +236,15 @@ Score every beat to a spoken line, so this section has no unscored silence:
 
 On "vision, speech, and language," flash three small violet labels, **Vision**, **Speech**, and **Language**, then clear them.
 
-Clear the network workspace. Keep the email, the Artificial Intelligence card, the green spam card, and the dog result. On "Deep learning," expand a violet solid region through the inner part of the green area, leaving a band of green and a 4–6 pixel `#070A16` gutter. The spam card stays in the green band. Drop the **Dog: 98%** card into the violet area. Light **DL** in the legend. On "The dog is solved. The day is not," pulse the parked **TUE → WED** chip. The draft card stays unopened.
+Clear the network workspace. Keep the email, the Artificial Intelligence card, the green spam card, and the dog result. As the clean forward pass resolves, expand a violet solid region through the inner part of the green area, leaving a band of green and a 4–6 pixel `#070A16` gutter. The spam card stays in the green band. Drop the **Dog: 98%** card into the violet area. **DL** is already lit in the legend from the opening takeaway. On "The dog is solved. The day is not," pulse the parked **TUE → WED** chip. The draft card stays unopened.
 
 **[Host]**
 
 The spam model never opened the attachment. This one finds the dog. It does not write the day.
 
 This is the system that saw the dog.
+
+Deep learning is machine learning using neural networks with many layers.
 
 "Neural" is a loose nod to brain cells.
 
@@ -253,8 +280,6 @@ Dog. 98 percent.
 
 More pictures, faster chips, and better training made this work. Vision, speech, and language moved with it.
 
-Deep learning.
-
 The dog is solved. The day is not.
 
 ---
@@ -265,17 +290,21 @@ The dog is solved. The day is not.
 
 **[Animation plan]** Bring the pink reply card forward. The corner chip **TUE → WED** is still visible. Split the frame. The green spam model, on the same email, outputs **Spam probability: 96%**. The pink side receives **Draft a polite reply** and writes token by token.
 
-Start the reply as **See you ___**. Show a few candidate tokens with probabilities. Let **Wednesday** win. Append it. Continue through **at 10:00**. The reply text is pink while it is being written.
+Before the token candidates appear, give the pink takeaway one clean beat: **Generative AI creates a new output instead of only choosing a label.** Finish the sentence, light **GenAI** in the legend, and dock **GenAI · creates a new output** above the writing side.
+
+Start the reply as **See you ___**. Show a few candidate tokens with probabilities. Let **Wednesday** win. Append it. On "phone autocomplete," keep appending tokens the way a keyboard suggestion does, through **at 10:00**, until the whole draft is on screen. The reply text is pink while it is being written.
 
 When Wednesday locks in, shift that word from pink to coral, pulse the corner chip, and write **Hallucination** once. Do not build a warning montage here.
 
-On "That is generative AI," light **GenAI** in the legend. On "Generative AI," draw a solid pink region over part of the violet Deep Learning region, not most of it, with a smaller pink-only extension outside the violet region but still inside the outer AI boundary. The overlap is the solid deep purple `#35194F`, not a transparent blend. Keep that intersection inside the violet region so it never touches the background. Violet-only deep learning keeps `#53368A`. Rose-only generative AI keeps `#C4485C`. Drop the reply card on that region. Flash the extension only for the line about older generative methods. On "what changed," brighten the pink region and keep the prompt **Draft a polite reply** readable. Do not place any of the pink region outside the cyan AI boundary.
+After the wrong token locks in, draw a solid pink Generative AI region over part of the violet Deep Learning region, not most of it, with a smaller pink-only extension outside the violet region but still inside the outer AI boundary. The overlap is the solid deep purple `#35194F`, not a transparent blend. Keep that intersection inside the violet region so it never touches the background. Violet-only deep learning keeps `#53368A`. Rose-only generative AI keeps `#C4485C`. Drop the reply card on that region. Flash the extension only for the line about older generative methods. On "what changed," brighten the pink region and keep the prompt **Draft a polite reply** readable. Do not place any of the pink region outside the cyan AI boundary.
 
 When the host says the model saw Tuesday, draw a visible influence from the word **Tuesday** into the candidate scores. **Tuesday** raises some scores. **Wednesday** still receives the higher score and wins. Do not depict the message as unused, ignored, or disconnected. Prediction is not verification.
 
 **[Host]**
 
 The spam model picked a label.
+
+Generative AI creates a new output instead of only choosing a label.
 
 This system writes.
 
@@ -284,6 +313,8 @@ See.
 You.
 
 Wednesday.
+
+This is phone autocomplete, kept going until it wrote the whole reply.
 
 Wednesday fit the sentence.
 
@@ -295,13 +326,13 @@ It generates a likely next piece, then the next, then the next. Not a guaranteed
 
 A piece like that is a token. A word, part of a word, or a mark.
 
-That is generative AI. It produces a new sample. Text, an image, audio, video, code.
+The output could be text, an image, audio, video, or code.
 
 New does not mean from nothing. The patterns came from its training. The sentence is new. The habit is old.
 
 Computer systems generated text before modern deep networks. That is why the pink region extends beyond deep learning. Most generative-AI products people use today are still powered by deep neural networks.
 
-What changed is the scale, the quality, and that you can steer it in ordinary language.
+What changed is the scale, the quality, and that you can steer it in ordinary language. That is the layer that made people call all of it AI.
 
 The wrong day sounded perfect.
 
@@ -315,23 +346,29 @@ That confident mistake is a hallucination.
 
 **[Animation plan]** One orange **Foundation Model** block. Broad sources converge on it. The name is the picture: one block splits into orange branches on the same email, **Summarize the thread**, **Classify urgency**, **Extract the meeting date**, **Translate**, and **Draft a reply**. The draft branch is the pink reply already on screen. Keep the email visible. Do not show the block as a definition card with no paths.
 
-Zoom the block and add the label **Large Language Model**. Light **LLM** in the legend on "An LLM." The block stays orange. Any new tokens stay pink.
+Before the branches split, give the orange takeaway one clean beat: **One broadly trained model can support many jobs.** Finish the sentence, dock **Foundation model · shared base**, and then open the five branches.
+
+Zoom the block and add the label **Large Language Model**. Give the LLM takeaway a second clean beat: **An LLM is a language model that generates one token at a time.** Light **LLM** in the legend, dock **LLM · language, token by token**, and keep the block orange. Any new tokens stay pink.
 
 Do not replay the reply. The Wednesday chip is still in the corner for the last line.
 
 **[Host]**
 
-One model can summarize this thread, mark the urgency, pull the meeting date, translate it, and draft the reply.
+One broadly trained model can support many jobs.
 
-A foundation model is trained broadly enough to be adapted to many jobs.
+That is a foundation model.
+
+Here, one model can summarize this thread, mark the urgency, pull the meeting date, translate it, and draft the reply.
 
 Generative AI is the capability: it generates new content. A foundation model is the broad base those jobs can share.
 
-An LLM is a large model trained to work with language. Many modern LLMs serve as foundation models.
+An LLM is a language model that generates one token at a time.
+
+Many modern LLMs serve as foundation models.
 
 ChatGPT is an app built on models like that. The app is not the definition.
 
-A typical LLM generates one token at a time. Fluent is not the same as true.
+Fluent is not the same as true.
 
 A multimodal model works across two or more kinds of data, such as text and images, or audio and video.
 
@@ -347,7 +384,7 @@ More skills did not make it more truthful.
 
 - **Bias → Check**
 - **Private data → Protect**
-- **Synthetic media → Disclose**
+- **Synthetic media → Disclose**. On this hit, the reply briefly plays as a voice chip in the sender's name, labeled **Deepfake**, then the action word lands.
 - **The job you need → Test**
 
 No red montage. Return to the corrected reply.
@@ -356,7 +393,7 @@ No red montage. Return to the corrected reply.
 
 The same system can draft, summarize, and translate in seconds.
 
-It can also repeat a bias, leak something private, or impersonate someone.
+It can also repeat a bias, leak something private, or impersonate someone. The reply could be a deepfake, a voice that sounds like the sender.
 
 Check the day. Protect the data. If the media is synthetic, say so.
 

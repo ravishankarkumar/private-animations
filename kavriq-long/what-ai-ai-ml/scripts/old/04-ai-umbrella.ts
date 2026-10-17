@@ -1,9 +1,9 @@
 import { Scene, Timeline } from "murali-js/core";
 import { Circle } from "murali-js/primitives";
 import { Label } from "murali-js/text";
-import { COLOR, FRAME } from "./lib/theme.ts";
-import { addCard, addHeading, addLine, addPill } from "./lib/ui.ts";
-import { renderScene } from "./lib/render.ts";
+import { COLOR, FRAME } from "../lib/theme.ts";
+import { addCard, addHeading, addLine, addPill } from "../lib/ui.ts";
+import { renderScene } from "../lib/render.ts";
 
 class AIUmbrellaScene extends Scene {
   constructor() {
@@ -11,7 +11,7 @@ class AIUmbrellaScene extends Scene {
   }
 
   override construct(): void {
-    const heading = addHeading(this, "ARTIFICIAL INTELLIGENCE", "The broad goal—not a synonym for machine learning");
+    const heading = addHeading(this, "ARTIFICIAL INTELLIGENCE", "AI is the broad goal. Learning is optional.");
     const ai = this.add(Circle().radius(1.28).fill("rgba(49,215,255,0.10)").stroke({ color: COLOR.ai, width: 0.055 }), { at: [0, 0.35, 0] });
     const aiLabel = this.add(Label("AI").height(0.78).color(COLOR.ai).css({ fontWeight: 950 }), { at: [0, 0.47, 0.02] });
     const aiSub = this.add(Label("Broad field and goal").height(0.18).color(COLOR.ink).css({ fontWeight: 700 }), { at: [0, -0.2, 0.02] });

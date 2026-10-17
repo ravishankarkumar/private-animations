@@ -1,8 +1,8 @@
 import { Scene, Timeline } from "murali-js/core";
 import { Label } from "murali-js/text";
-import { COLOR, FRAME } from "./lib/theme.ts";
-import { addArrow, addCard, addHeading, addPill, addProgressBar } from "./lib/ui.ts";
-import { renderScene } from "./lib/render.ts";
+import { COLOR, FRAME } from "../lib/theme.ts";
+import { addArrow, addCard, addHeading, addPill, addProgressBar } from "../lib/ui.ts";
+import { renderScene } from "../lib/render.ts";
 
 class MLTrainingInferenceScene extends Scene {
   constructor() {
@@ -10,7 +10,7 @@ class MLTrainingInferenceScene extends Scene {
   }
 
   override construct(): void {
-    const heading = addHeading(this, "MACHINE LEARNING", "Training learns the parameters • inference uses them");
+    const heading = addHeading(this, "MACHINE LEARNING", "One way to build AI: learn patterns from examples");
     const trainingTag = addPill(this, "TRAINING", [-4.9, 2.25], COLOR.ml, 1.55);
     const examples = [
       addCard(this, { title: "Email A", subtitle: "Prize waiting", result: "SPAM", color: COLOR.warning, at: [-5.1, 1.25], size: [2.35, 1.25] }),

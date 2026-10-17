@@ -1,8 +1,8 @@
 import { Scene, Timeline } from "murali-js/core";
 import { Label } from "murali-js/text";
-import { COLOR, FRAME } from "./lib/theme.ts";
-import { addArrow, addCard, addEmailMessage, addHeading } from "./lib/ui.ts";
-import { renderScene } from "./lib/render.ts";
+import { COLOR, FRAME } from "../lib/theme.ts";
+import { addArrow, addCard, addEmailMessage, addHeading } from "../lib/ui.ts";
+import { renderScene } from "../lib/render.ts";
 
 class FoundationModelsScene extends Scene {
   constructor() {
@@ -10,7 +10,7 @@ class FoundationModelsScene extends Scene {
   }
 
   override construct(): void {
-    const heading = addHeading(this, "FOUNDATION MODELS", "Learn broadly once, then adapt to many downstream tasks");
+    const heading = addHeading(this, "FOUNDATION MODELS", "One broadly trained model can support many jobs");
     const sourceSpecs = [
       ["Books", "Long-form language"], ["Web pages", "Broad public knowledge"],
       ["Code", "Patterns and structure"], ["Documents", "Specialized writing"],
@@ -40,7 +40,7 @@ class FoundationModelsScene extends Scene {
       addArrow(this, [0.5, 0.7 - index * 0.25], [3.35, 2.0 - index * 0.92], COLOR.foundation));
     const email = addEmailMessage(this, [0.25, -3.25], 0.52);
     const caption = this.add(
-      Label("One base model can help across the email workflow.").height(0.18).color(COLOR.muted).css({ fontWeight: 700 }),
+      Label("One broadly trained model can help across the email workflow.").height(0.18).color(COLOR.muted).css({ fontWeight: 700 }),
       { at: [3.55, -3.25, 0] },
     );
 

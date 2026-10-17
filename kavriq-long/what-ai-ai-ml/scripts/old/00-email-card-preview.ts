@@ -1,7 +1,7 @@
 import { Scene, Timeline } from "murali-js/core";
-import { COLOR, FRAME } from "./lib/theme.ts";
-import { addOpenEmailView } from "./lib/open-email.ts";
-import { renderScene } from "./lib/render.ts";
+import { COLOR, FRAME } from "../lib/theme.ts";
+import { addOpenEmailView } from "../lib/open-email.ts";
+import { renderScene } from "../lib/render.ts";
 
 class EmailCardPreviewScene extends Scene {
   constructor() {

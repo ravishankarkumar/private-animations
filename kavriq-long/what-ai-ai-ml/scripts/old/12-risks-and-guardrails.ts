@@ -1,8 +1,8 @@
 import { Scene, Timeline } from "murali-js/core";
 import { Label } from "murali-js/text";
-import { COLOR, FRAME } from "./lib/theme.ts";
-import { addArrow, addCard, addHeading } from "./lib/ui.ts";
-import { renderScene } from "./lib/render.ts";
+import { COLOR, FRAME } from "../lib/theme.ts";
+import { addArrow, addCard, addHeading } from "../lib/ui.ts";
+import { renderScene } from "../lib/render.ts";
 
 class RisksAndGuardrailsScene extends Scene {
   constructor() {

@@ -1,8 +1,8 @@
 import { Scene, Timeline } from "murali-js/core";
 import { Label } from "murali-js/text";
-import { COLOR, FRAME } from "./lib/theme.ts";
-import { addArrow, addCard, addHeading, addPill, addProgressBar } from "./lib/ui.ts";
-import { renderScene } from "./lib/render.ts";
+import { COLOR, FRAME } from "../lib/theme.ts";
+import { addArrow, addCard, addHeading, addPill, addProgressBar } from "../lib/ui.ts";
+import { renderScene } from "../lib/render.ts";
 
 class NextTokenGenerationScene extends Scene {
   constructor() {
@@ -10,7 +10,7 @@ class NextTokenGenerationScene extends Scene {
   }
 
   override construct(): void {
-    const heading = addHeading(this, "HOW AN LLM GENERATES TEXT", "Predict a likely next token, append it, and repeat");
+    const heading = addHeading(this, "LARGE LANGUAGE MODEL", "Generate one token at a time: predict, append, repeat");
     const prompt = addCard(this, {
       title: "Prompt + current context", subtitle: "Thanks for the invitation.", detail: "I’ll …",
       color: COLOR.ai, at: [-5.05, 0.8], size: [4.0, 2.0],
