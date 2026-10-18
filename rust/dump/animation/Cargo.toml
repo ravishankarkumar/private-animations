@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-murali = { version = "0.1.0", path = "../../murali" }
+murali = { version = "0.3.0", path = "../../../../murali" }
 # winit = "0.30"
 # wgpu = "0.20"
 # env_logger = "0.10"

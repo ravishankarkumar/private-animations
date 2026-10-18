@@ -1,7 +1,7 @@
-import { render } from "murali-js";
-import { Scene, timeline } from "murali-js/core";
-import { Arrow, Circle, Rectangle } from "murali-js/primitives";
-import { Label, type LabelTattva } from "murali-js/text";
+import { render } from "veena";
+import { Scene, timeline } from "veena/core";
+import { Arrow, Circle, Rectangle } from "veena/primitives";
+import { Label, type LabelTattva } from "veena/text";
 
 const BG = "#070A16";
 const PANEL = "#141C32";

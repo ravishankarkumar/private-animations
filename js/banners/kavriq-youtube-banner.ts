@@ -1,9 +1,9 @@
-import { render } from "murali-js";
-import { MuraliLogoMark } from "murali-js/composite";
-import { Scene } from "murali-js/core";
-import { fontFile } from "murali-js/style";
-import { Ellipse, Rectangle, worldPath } from "murali-js/primitives";
-import { Label } from "murali-js/text";
+import { render } from "veena";
+import { VeenaLogoMark } from "veena/composite";
+import { Scene } from "veena/core";
+import { fontFile } from "veena/style";
+import { Ellipse, Rectangle, worldPath } from "veena/primitives";
+import { Label } from "veena/text";
 
 const BLACK = "#030305";
 const PAPER = "#F7F7F2";
@@ -12,11 +12,11 @@ const BLUE = "#2563EB";
 const VIOLET = "#7C3AED";
 const CORAL = "#FF6B5F";
 
-// The file lives in murali-js, but this banner source and its output stay in
-// private-animations. The font path is embedded by Murali's scene bundler.
+// The file lives in Veena, but this banner source and its output stay in
+// private-animations. The font path is embedded by Veena's scene bundler.
 const SATOSHI = fontFile(
   "Satoshi",
-  "../../../murali-js/assets/fonts/private/Satoshi-Bold.ttf",
+  "../../../veena/assets/fonts/private/Satoshi-Bold.ttf",
   { weight: 700 },
 );
 
@@ -58,7 +58,7 @@ class KavriqYouTubeBanner extends Scene {
     );
 
     // Three trajectories read as animation curves or motion trails, even in a
-    // still banner. Their phase offsets borrow the Murali mark's three colors.
+    // still banner. Their phase offsets borrow the Veena mark's three colors.
     this.add(
       worldPath()
         .moveTo(-7.4, -2.72)
@@ -89,17 +89,17 @@ class KavriqYouTubeBanner extends Scene {
     ] as const;
     for (const trail of trails) {
       this.add(
-        MuraliLogoMark({ width: trail.width })
+        VeenaLogoMark({ width: trail.width })
           .opacity(trail.opacity)
           .css({ filter: `blur(${trail.blur}px)` }),
         { at: [trail.x, 0.08, 0] },
       );
     }
 
-    // The canonical, settled Murali mark uses the exact blue/violet/coral
-    // palette and touching-oval geometry from murali-js.
+    // The canonical, settled Veena mark uses the exact blue/violet/coral
+    // palette and touching-oval geometry from Veena.
     this.add(
-      MuraliLogoMark({ width: 1.62 })
+      VeenaLogoMark({ width: 1.62 })
         .css({ filter: "drop-shadow(0 18px 34px rgb(0 0 0 / 55%))" }),
       { at: [-3.35, 0.08, 2] },
     );

@@ -1,8 +1,8 @@
-import { render } from "murali-js";
-import { YouTubeSubscribe, YouTubeSubscribeSequence } from "murali-js/composite";
-import { Scene, timeline } from "murali-js/core";
-import { SierpinskiTriangle } from "murali-js/maths";
-import { Label } from "murali-js/text";
+import { render } from "veena";
+import { YouTubeSubscribe, YouTubeSubscribeSequence } from "veena/composite";
+import { Scene, timeline } from "veena/core";
+import { SierpinskiTriangle } from "veena/maths";
+import { Label } from "veena/text";
 
 const BG = "#090617";
 const VIOLET = "#C69CFF";

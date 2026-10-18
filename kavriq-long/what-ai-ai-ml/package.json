@@ -1,0 +1,35 @@
+{
+  "name": "kavriq-what-is-ai-ml-dl-genai",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:deps": "npm --prefix ../../../veena run build --silent && npm --prefix ../../../murali-scene-kit-js run build --silent",
+    "typecheck": "tsc --noEmit",
+    "render": "tsx",
+    "render:introduction": "tsx scripts/01-introduction.ts",
+    "render:rule-based-ai": "tsx scripts/02-rule-based-ai.ts",
+    "render:machine-learning": "tsx scripts/03-machine-learning.ts",
+    "render:data-science": "tsx scripts/04-data-science-and-learning-types.ts",
+    "render:deep-learning": "tsx scripts/05-deep-network.ts",
+    "render:deep-network": "tsx scripts/05-deep-network.ts",
+    "render:generative-ai": "tsx scripts/06-generative-ai.ts",
+    "render:foundation-models": "tsx scripts/07-foundation-models-and-llms.ts",
+    "render:risks": "tsx scripts/08-hallucinations-risks-and-verification.ts",
+    "render:summary": "tsx scripts/09-summary.ts",
+    "render:all": "tsx scripts/render-all.ts",
+    "render:master": "tsx scripts/render-master.ts",
+    "render:complete": "npm run render:all && npm run render:master"
+  },
+  "dependencies": {
+    "veena": "file:../../../veena",
+    "murali-scene-kit": "file:../../../murali-scene-kit-js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

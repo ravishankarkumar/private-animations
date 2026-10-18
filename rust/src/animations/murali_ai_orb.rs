@@ -8,7 +8,7 @@ use murali::engine::scene::Scene;
 use murali::engine::timeline::Timeline;
 use murali::frontend::TattvaId;
 use murali::frontend::animation::Ease;
-use murali::frontend::collection::graph::parametric_surface::{
+use murali::frontend::collection::maths::calculus::parametric_surface::{
     ParametricSurface, SurfaceRenderMode,
 };
 use murali::frontend::collection::primitives::circle::Circle;

@@ -1,8 +1,8 @@
-import { render } from "murali-js";
-import { Canvas3DTattva, type Canvas3DContext } from "murali-js/adapters";
-import { YouTubeSubscribe, YouTubeSubscribeSequence } from "murali-js/composite";
-import { Scene, timeline, type TattvaState } from "murali-js/core";
-import { Label } from "murali-js/text";
+import { render } from "veena";
+import { Canvas3DTattva, type Canvas3DContext } from "veena/adapters";
+import { YouTubeSubscribe, YouTubeSubscribeSequence } from "veena/composite";
+import { Scene, timeline, type TattvaState } from "veena/core";
+import { Label } from "veena/text";
 
 const BG = "#040812";
 const INK = "#F4FBFF";

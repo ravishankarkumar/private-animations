@@ -1,8 +1,8 @@
-import { render } from "murali-js";
-import { YouTubeSubscribe, YouTubeSubscribeSequence } from "murali-js/composite";
-import { Scene, timeline } from "murali-js/core";
-import { FractalTree } from "murali-js/maths";
-import { Label } from "murali-js/text";
+import { render } from "veena";
+import { YouTubeSubscribe, YouTubeSubscribeSequence } from "veena/composite";
+import { Scene, timeline } from "veena/core";
+import { FractalTree } from "veena/maths";
+import { Label } from "veena/text";
 
 const BG = "#04110D";
 const GREEN = "#7CF7B4";

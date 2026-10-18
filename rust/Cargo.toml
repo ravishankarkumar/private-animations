@@ -133,6 +133,6 @@ name = "murali-ai-orb"
 path = "src/bin/murali_ai_orb.rs"
 
 [dependencies]
-murali = { version = "0.1.6", path = "../murali" }
+murali = { version = "0.3.0", path = "../../murali" }
 anyhow = "1.0"
-glam = { version = "0.27", features = ["bytemuck"] }
+glam = { version = "0.34", features = ["bytemuck"] }

@@ -1,9 +1,9 @@
-import { render } from "murali-js";
-import { Scene, timeline, type Tattva } from "murali-js/core";
-import { YouTubeSubscribe, YouTubeSubscribeSequence } from "murali-js/composite";
-import { Arrow, Rectangle } from "murali-js/primitives";
-import { Fireworks } from "murali-js/storytelling";
-import { Label } from "murali-js/text";
+import { render } from "veena";
+import { Scene, timeline, type Tattva } from "veena/core";
+import { YouTubeSubscribe, YouTubeSubscribeSequence } from "veena/composite";
+import { Arrow, Rectangle } from "veena/primitives";
+import { Fireworks } from "veena/storytelling";
+import { Label } from "veena/text";
 
 const BG = "#070A16";
 const PANEL = "#141C32";

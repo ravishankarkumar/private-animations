@@ -1,7 +1,7 @@
-import { render } from "murali-js";
-import { YouTubeSubscribe, YouTubeSubscribeSequence } from "murali-js/composite";
-import { Scene, Tattva, timeline, type TattvaState } from "murali-js/core";
-import { Label } from "murali-js/text";
+import { render } from "veena";
+import { YouTubeSubscribe, YouTubeSubscribeSequence } from "veena/composite";
+import { Scene, Tattva, timeline, type TattvaState } from "veena/core";
+import { Label } from "veena/text";
 
 const BG = "#040812";
 const INK = "#F4FBFF";

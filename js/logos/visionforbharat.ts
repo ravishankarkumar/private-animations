@@ -1,8 +1,8 @@
-import { render } from "murali-js";
-import { Scene } from "murali-js/core";
-import { Group } from "murali-js/layout";
-import { Ellipse, Rectangle, VectorShape } from "murali-js/primitives";
-import { Label } from "murali-js/text";
+import { render } from "veena";
+import { Scene } from "veena/core";
+import { Group } from "veena/layout";
+import { Ellipse, Rectangle, VectorShape } from "veena/primitives";
+import { Label } from "veena/text";
 
 const IVORY = "#FFF8EC";
 const NAVY = "#142A46";

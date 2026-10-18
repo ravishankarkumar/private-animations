@@ -1,9 +1,9 @@
-import { render } from "murali-js";
-import { ThreeTattva } from "murali-js/adapters";
-import { YouTubeSubscribe, YouTubeSubscribeSequence } from "murali-js/composite";
-import { Scene, timeline, type TattvaState } from "murali-js/core";
-import { Circle } from "murali-js/primitives";
-import { Label } from "murali-js/text";
+import { render } from "veena";
+import { ThreeTattva } from "veena/adapters";
+import { YouTubeSubscribe, YouTubeSubscribeSequence } from "veena/composite";
+import { Scene, timeline, type TattvaState } from "veena/core";
+import { Circle } from "veena/primitives";
+import { Label } from "veena/text";
 import * as THREE from "three";
 
 const BG = "#030711";

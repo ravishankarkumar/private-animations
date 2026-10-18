@@ -1,0 +1,14 @@
+[package]
+name = "kavriq-rust-scripts"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[[bin]]
+name = "deep-network-flythrough"
+path = "src/bin/deep_network_flythrough.rs"
+
+[dependencies]
+murali = { path = "../../../../murali" }
+anyhow = "1"
+glam = { version = "0.34.1", features = ["bytemuck"] }
