@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:deps": "npm --prefix ../../../veena run build --silent && npm --prefix ../../../murali-scene-kit-js run build --silent",
+    "build:deps": "npm --prefix ../../../veena run build --silent",
     "typecheck": "tsc --noEmit",
     "render": "tsx",
     "render:introduction": "tsx scripts/01-introduction.ts",
@@ -16,16 +16,16 @@
     "render:foundation-models": "tsx scripts/07-foundation-models-and-llms.ts",
     "render:risks": "tsx scripts/08-hallucinations-risks-and-verification.ts",
     "render:summary": "tsx scripts/09-summary.ts",
+    "render:background-wave": "tsx scripts/backgrounds/wave-mesh-background.ts",
     "render:all": "tsx scripts/render-all.ts",
     "render:master": "tsx scripts/render-master.ts",
     "render:complete": "npm run render:all && npm run render:master"
   },
   "dependencies": {
-    "veena": "file:../../../veena",
-    "murali-scene-kit": "file:../../../murali-scene-kit-js"
+    "veena": "file:../../../veena"
   },
   "devDependencies": {
-    "@types/node": "^24.5.2",
+    "@types/node": "^24.19.2",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   },

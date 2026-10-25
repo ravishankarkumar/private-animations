@@ -2,10 +2,10 @@ import { KavriqSplashLogo, KavriqSplashMotion } from "veena/composite";
 import { Scene, Timeline, type Tattva, type Vec2 } from "veena/core";
 import { Arrow, Circle, Rectangle } from "veena/primitives";
 import { Label } from "veena/text";
-import { addFinalConceptMap } from "./lib/final-concept-map.ts";
-import { addOpenEmailView } from "./lib/open-email.ts";
-import { renderScene } from "./lib/render.ts";
-import { COLOR, FRAME } from "./lib/theme.ts";
+import { addFinalConceptMap } from "../lib/final-concept-map.ts";
+import { addOpenEmailView } from "../lib/open-email.ts";
+import { renderScene } from "../lib/render.ts";
+import { COLOR, FRAME } from "../lib/theme.ts";
 
 const FILL = {
   panel: "#11192C",

@@ -4,9 +4,9 @@ import { Scene, Timeline, type Tattva, type Vec2 } from "veena/core";
 import { Arrow, Circle, Rectangle } from "veena/primitives";
 import { Label } from "veena/text";
 import { Newspaper, NewspaperOpening } from "veena/storytelling";
-import { addOpenEmailView } from "./lib/open-email.ts";
-import { renderScene } from "./lib/render.ts";
-import { COLOR, FRAME } from "./lib/theme.ts";
+import { addOpenEmailView } from "../lib/open-email.ts";
+import { renderScene } from "../lib/render.ts";
+import { COLOR, FRAME } from "../lib/theme.ts";
 
 const SOLID = {
   ai: "#17647D",

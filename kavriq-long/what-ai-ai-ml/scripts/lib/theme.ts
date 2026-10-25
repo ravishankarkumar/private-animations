@@ -1,3 +1,19 @@
+/**
+ * Stable semantic palette for the concepts used throughout the film.
+ *
+ * `fill` owns large surfaces such as regions, circles, and cards.
+ * `accent` owns small high-energy details such as arrows, pulses, and highlights.
+ * Text placed on a category fill should normally use `COLOR.ink`.
+ */
+export const CATEGORY = {
+  ai: { fill: "#17647D", accent: "#31D7FF" },
+  ml: { fill: "#1E7A55", accent: "#57E3A1" },
+  dl: { fill: "#53368A", accent: "#9B6DFF" },
+  genai: { fill: "#C4485C", accent: "#FF5FA2" },
+  foundation: { fill: "#9A5A20", accent: "#FF9F43" },
+  dataScience: { fill: "#956B22", accent: "#FFE08A" },
+} as const;
+
 export const COLOR = {
   background: "#070A16",
   panel: "#141C32",
@@ -5,11 +21,11 @@ export const COLOR = {
   ink: "#F8FAFC",
   muted: "#9AA7C1",
   grid: "#263758",
-  ai: "#31D7FF",
-  ml: "#57E3A1",
-  dl: "#9B6DFF",
-  foundation: "#FF9F43",
-  genai: "#FF5FA2",
+  ai: CATEGORY.ai.accent,
+  ml: CATEGORY.ml.accent,
+  dl: CATEGORY.dl.accent,
+  foundation: CATEGORY.foundation.accent,
+  genai: CATEGORY.genai.accent,
   warning: "#FF6B5F",
   gold: "#FFC247"
 } as const;

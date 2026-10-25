@@ -9,9 +9,9 @@ import { KavriqSplashLogo, KavriqSplashMotion } from "veena/composite";
 import { Scene, Timeline, type Tattva, type TattvaState, type Vec2 } from "veena/core";
 import { Circle, Line, Rectangle } from "veena/primitives";
 import { Label } from "veena/text";
-import { addOpenEmailView } from "./lib/open-email.ts";
-import { renderScene } from "./lib/render.ts";
-import { ALPHA, COLOR, FRAME } from "./lib/theme.ts";
+import { addOpenEmailView } from "../lib/open-email.ts";
+import { renderScene } from "../lib/render.ts";
+import { ALPHA, COLOR, FRAME } from "../lib/theme.ts";
 
 const SOLID = {
   ai: "#17647D",

@@ -1,16 +1,16 @@
 import type { Scene, Tattva, Vec2 } from "veena/core";
 import { Arrow, Rectangle } from "veena/primitives";
 import { Label } from "veena/text";
-import { COLOR } from "./theme.ts";
+import { CATEGORY, COLOR } from "./theme.ts";
 
 const FILL = {
-  ai: "#17647D",
-  ml: "#1E7A55",
-  dl: "#53368A",
-  genai: "#C4485C",
+  ai: CATEGORY.ai.fill,
+  ml: CATEGORY.ml.fill,
+  dl: CATEGORY.dl.fill,
+  genai: CATEGORY.genai.fill,
   overlap: "#35194F",
-  foundation: "#9A5A20",
-  dataScience: "#677585",
+  foundation: CATEGORY.foundation.fill,
+  dataScience: CATEGORY.dataScience.fill,
   dataScienceOverlap: "#123744",
   warning: "#3B2026",
 } as const;

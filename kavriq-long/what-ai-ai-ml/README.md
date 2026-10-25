@@ -1,6 +1,6 @@
 # AI / ML / DL / Foundation Models / Generative AI animations
 
-The narration is split into 13 standalone Murali scenes. Each scene renders its own MP4, so timing and visuals can be revised without re-rendering the full video.
+The narration is split into standalone Veena scenes. Each scene renders its own MP4, so timing and visuals can be revised without re-rendering the full video.
 
 ## Setup
 
@@ -11,10 +11,9 @@ npm run build:deps
 npm run typecheck
 ```
 
-The animation dependencies use the local source checkouts requested for this project:
+The animation dependency uses the local Veena source checkout:
 
 - `/Users/ravishankar/personal-work/animation/veena`
-- `/Users/ravishankar/personal-work/animation/murali-scene-kit-js`
 
 ## Render
 

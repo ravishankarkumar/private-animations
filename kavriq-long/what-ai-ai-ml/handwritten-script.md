@@ -99,22 +99,49 @@ Keep a narrow background-coloured gutter where neighbouring solid regions requir
 
 ## 1. Introduction
 
-This one email puts four different AI systems to work.
+-> Live camera feed
+Artificial Intelligence—or AI—Machine Learning, Deep Learning, and Generative AI can feel mysterious to many people. They are often treated like a black box that somehow performs magic.
 
-The first one flags the warning signs.  
-The second one gives it a 96 percent spam score.  
-The third one recognises the dog in the attachment.  
-And the fourth one writes this draft reply.
+If that is how they feel to you, you have come to the right place. By the end of this video, you will understand these concepts well enough to explain them clearly to someone else. That is my promise.
 
-But look closely. The email says **Tuesday**, and the draft confidently says **Wednesday**.
+-> Live camera feed ends: Exact time -> 28.26 seconds (global time)
+-> ANimation starts
 
-Inside this one email are several terms people often mix up. They are related, but they are not interchangeable. Let's separate them by opening each result.
+Let us start with this sample email. Four different AI systems have worked on it.
 
+The first one flagged it as suspicious.
+The second classified it as spam.
+The third one recognised the dog in the attachment.
+And the fourth one wrote this draft reply.
 
+But there is a problem. The email says **Tuesday**, while the draft confidently says **Wednesday**.
+
+This single email gives us a practical way to separate Artificial Intelligence, Machine Learning, Deep Learning, and Generative AI. We will examine each result, understand the mechanism behind it, and gradually build a clear map showing how these concepts are related—and how they differ.
+
+We will also see why generative AI can confidently be wrong—a problem called **hallucination**—and how to build reliable systems around it.
+
+-> Animation ends global time 1 min 25.09 seconds
 
 ### 1. Introduction - Animation
 
-Open on the envelope. It opens within the first few seconds, and the email card moves to centre stage. Do not open on a newspaper montage, and do not begin with a spoken list of terminology. Newspapers belong to the generative-AI section. The muted legend may show the terms. The narration does not read them yet.
+Timecodes in this section use `minutes:seconds:frames` at 30 frames per second.
+
+- Animation begins at `00:28:26` global time, immediately after the live camera feed ends.
+- “Let us start with this sample email” begins at `00:30:25`.
+- “Four different AI systems” begins at `00:33:11`.
+- The first system begins at `00:36:11`.
+- The second system begins at `00:39:11`.
+- The third system begins at `00:43:11`.
+- The fourth system begins at `00:46:11`.
+- “But there is a problem” begins at `00:49:11`.
+- The Tuesday-to-Wednesday discrepancy begins at `00:52:00`.
+- AI, Machine Learning, Deep Learning, and Generative AI are named from `01:00:00`.
+- Hallucination is introduced at `01:16:14`.
+- Segment 1 officially ends at `01:25:09` global time.
+
+Start on a fresh animation screen using the standard `#070A16` background. A direct screen change from the real footage is acceptable. Do not carry the wave mesh into this scene, fade it down, or try to morph it into the animation.
+
+Keep the Kavriq logo fixed at the top-right. Open on the envelope against the otherwise empty screen. Between `00:28:26` and `00:30:25`, the envelope enters and immediately begins opening. As the narrator says, “Let us start with this sample email,” the email card rises from the envelope and moves to centre stage. The opening should feel deliberate but compact; do not force separate entrance, settling, and opening pauses into this short lead-in. Do not open on a newspaper montage or a terminology screen. Newspapers belong to the generative-AI section.
 
 The email card uses the neutral panel `#141C32` and contains only these readable fields:
 
@@ -125,267 +152,210 @@ The email card uses the neutral panel `#141C32` and contains only these readable
 - Attachment: `dog-photo.jpg`
 - Draft reply: `See you Wednesday at 10:00.`
 
-The message never contains the word spam. The sender line, the urgent subject, and the confirmation link are the evidence for the checklist and the spam score. The Tuesday sentence and the dog attachment stay unconnected to those two results.
+The message never contains the word spam. The sender line, the urgent subject, and the confirmation link are the evidence used by the suspicious-message and spam systems. The Tuesday sentence and the dog attachment stay unconnected to those two results.
 
-As each result is described, its card appears. Two cards sit above the email and two sit below it. Draw the result connectors as the cards appear, and keep them for the rest of the video. They keep tracking the email and their cards on every frame:
+At `00:33:11`, four subtle empty result positions appear around the email—two above it and two below it. As each result is described, its card occupies one of those positions. Draw its connectors as it appears, and keep them tracking their source and destination on every frame:
 
-- **FLAGGED** is fed by three arrows, one from the sender, one from the subject, and one from the link.
-- **SPAM 96%** has one arrow from those same message fields.
-- **DOG 98%** has one arrow from the attachment.
-- The draft card has one arrow from the reply.
+- At `00:36:11`, **FLAGGED** appears above-left. Briefly illuminate the sender, urgent subject, and confirmation link. Three animated paths travel from those fields into the card.
+- At `00:39:11`, **SPAM** appears above-right. Pulse the same sender, subject, and link fields. Let those three pulses converge visually at one small junction on the email’s edge, then draw a single connector from that junction to **SPAM**. Do not add a second set of three arrows, and do not show a probability in this introductory email interface. The underlying spam score will be revealed later while explaining machine learning.
+- At `00:43:11`, **DOG DETECTED** appears below-left. Briefly scan the attachment and connect it to the result. Do not show `98%` here. The model’s confidence score will be revealed later while explaining deep learning.
+- At `00:46:11`, **DRAFT REPLY** appears below-right. The reply is already fully written inside the email; simply draw one connector from that existing reply to the result card. Do not animate token-by-token generation in the introduction. That mechanism belongs in the Generative AI section.
 
-When the Tuesday-to-Wednesday error is mentioned, the **TUE → WED** pill shifts to the top-right corner. Use warning `#FF6B5F` for that pill, not the Generative AI rose.
+At `00:49:11`, briefly reduce the prominence of the four result cards without hiding them. Keep the email and its draft fully visible. At `00:52:00`, highlight **Tuesday** in the incoming message, then **Wednesday** in the draft. Draw a warning connection between them and form the **TUE → WED** pill. Use warning `#FF6B5F`, not the Generative AI rose. Park the pill immediately below the Kavriq logo so the two elements do not collide.
 
-At the same time, introduce the muted persistent terminology legend in the opposite corner, in teaching order: **AI · ML · Data Science · DL · GenAI · Foundation Model · LLM**. Keep both the legend and the error pill fixed during later camera moves.
+At `01:00:00`, return all four cards to equal prominence. As the four technologies are named, briefly flash a small callout beside the corresponding result: **AI** beside **FLAGGED**, **MACHINE LEARNING** beside **SPAM**, **DEEP LEARNING** beside **DOG DETECTED**, and **GENERATIVE AI** beside **DRAFT REPLY**. Pulse each result once in narration order. These callouts are synchronized labels for the spoken sentence, not permanent badges or a taxonomy. Fade each callout after its beat so the four cards do not settle into four apparently equal categories.
+
+After the temporary callouts fade, introduce a small, visually muted journey legend containing **AI · ML · DL · GenAI**. It functions only as a list of concepts the video will visit; it must not resemble four equal cards or imply structural equivalence. The hierarchy and containment relationships will be constructed progressively in later sections. Add Data Science, Foundation Model, and LLM to the journey legend only when they are introduced.
+
+At `01:16:14`, pulse **TUE → WED** again and reveal the term **HALLUCINATION** beside it. During “build reliable systems around it,” place a dashed **VERIFY OUTPUT** boundary around the generated reply. Do not show a green tick or imply that the reply has already been verified.
+
+Hold the complete composition through `01:25:09`, when Segment 1 officially ends. The email, the four user-facing results, their connectors, the muted journey legend, and the parked error pill remain available for the opening rearrangement in Segment 2. The temporary technology callouts are no longer visible.
 
 ## 2. Explain rule-based AI through the email-warning checklist.
 
-Let's look at the system that flagged this email as suspicious. It checked a few hard-coded rules, such as:
+Let us look at the system that flagged this email as suspicious.
 
-- Unknown sender.
-- Urgent wording.
-- Suspicious link.
+Someone wrote the rules, and this email matched three of them:
 
-And it decided that the email was suspicious.
+- an unknown sender,
+- urgent wording,
+- and a confirmation link.
 
-There is no learning involved, yet the system can identify a suspicious message. This is also AI. AI refers to systems that perform tasks we generally associate with intelligence.
+So the system marked it as suspicious.
 
-**AI is the broad goal. Learning is optional.**
+This is a simple rule-based AI system: it imitates a decision that a human might otherwise make by following instructions written by people.
 
-A classical chess program that uses hand-designed search, or a loan-eligibility expert system, is also AI. Neither one learns. Systems like these existed for decades before a model learned from examples.
+In fact, **ELIZA**, one of the first famous chatbots, was a rule-based system. And people still call it an AI chatbot.
+
+ELIZA gained fame in the 1960s, decades before deep learning began powering many of today's AI systems.
 
 -> Real camera footage with my face
 
-This kind of system has one flaw. Once spammers learn which signals you use to flag them, they will avoid those signals, and the flagging system becomes ineffective.
+But don't get the wrong idea about what people usually mean by AI today. Today, they almost always mean that a machine-learning model is doing the main job under the hood.
 
-For this reason, a system that can learn becomes important.
+However, the model is not the entire application. The model makes a prediction, but other software decides what data to give it, when to use its output, how to verify it, and what action to take. Together, the model and this surrounding engineering form the AI application. That is why many AI engineers, including me, have never built a machine-learning model themselves.
+
+And there is a reason why rules alone are often not enough. Once spammers discover which signals the spam detector is looking for, they can begin working around them. This can make the spam-detection system less effective unless someone discovers the new tactics and updates the rules.
+
+That is why these rule-based systems become brittle, and why machine learning matters. That is what we will look at next.
 
 -> Return of animation
 
-We will keep this diagram and add to it as the other results open.
+So, in our Venn diagram, AI will occupy the largest region.
 
 ### 2. Animation
 
 This screen begins where the introduction finished. The result connectors are already tracking the email.
 
-Within the first second, the screen rearranges itself. Two smaller cards move to the top, and the other two move to the bottom.
+Then, the **FLAGGED** card is highlighted while the other three cards dim. A copy of the **FLAGGED** card is created in exactly the same position. The copy moves into the empty space on the screen to the right (`x = [8, 24]`, `y = [-4.5, 4.5]`), while the original card remains dimmed.
 
-The email card becomes smaller and shifts toward the left.
+**FLAGGED** becomes **RULES**, and a parchment scroll opens beneath it. Fill the scroll with many faint lines that suggest written rules without displaying actual text.
 
-All these changes happen simultaneously.
-
-Then, the **FLAGGED** card is highlighted while the other three cards dim. A copy of the **FLAGGED** card is created in exactly the same position. The copy moves into the empty space on the upper-right, while the original card remains dimmed.
-
-Retarget the three existing flagged arrows onto the copied card. Do not draw a second set. Below it, write three items one by one:
+As these three warning signals are spoken:
 
 - Unknown sender.
 - Urgent wording.
-- Suspicious link.
+- Confirmation link.
 
-This checklist, the definition, and the examples all happen before the camera. On the definition, zoom out and move the copied card onto the right-hand diagram screen at `x = [8, 24]`, `y = [-4.5, 4.5]`. Expand it into the solid Artificial Intelligence region, `#17647D`, and place **AI** near its top edge. Leave **FLAGGED** inside that region. Leave **SPAM 96%**, **DOG 98%**, and the draft outside it.
+Three separate lines on the scroll resolve into these labels, and a checkbox is drawn beside each one.
 
-Give the takeaway one uncluttered beat before the examples:
+When the narration reaches ELIZA, the scroll slides away. **RULES** becomes **ARTIFICIAL INTELLIGENCE** and moves to the top centre.
 
-**AI IS THE BROAD GOAL · LEARNING IS OPTIONAL**
+Draw a horizontal timeline across the centre of the screen. Use one concise sequence that combines the terminology milestones with the broader shifts in AI:
 
-Light **AI** in the persistent legend. Then shorten the docked section label to **AI · BROAD GOAL** and show:
+- **1956 — AI BECOMES A FIELD**
+- **1959 — MACHINE LEARNING**
+- **1966 — ELIZA**
+- **1980s — EXPERT SYSTEMS BOOM**
+- **2012 — DEEP-LEARNING BREAKTHROUGH**
+- **2022 — CHATGPT LAUNCHES**
 
-- **CLASSICAL CHESS SEARCH**
-- **LOAN ELIGIBILITY RULES**
+Keep this timeline visually brief; the narration does not need to stop and explain every milestone. When **ELIZA** is spoken, highlight the **1966 — ELIZA** marker.
 
-Hold this diagram completely still through the live camera footage. The footage covers only the brittleness of the fixed signals. When the animation returns, do not redraw the region or replay the takeaway. The diagram stays up so the next section can add to it.
+When the animation returns after the real-camera footage, the milestone labels vanish. The timeline morphs into a circle using the newly implemented shape-morph animation, and **AI** moves inside it.
 
+The circle, now grouped with the **AI** label, fills with the chosen AI colour. It bounces naturally a few times before coming to rest.
+
+Make the circle large enough to hold four nested layers later: AI, Machine Learning, Deep Learning, and Generative AI, in the proportion 5:4:3:2. The finished circle sits just below the frame centre so those later circles can share its bottom, with only a thin gap, matching the desktop Venn. **AI** sits in the upper part of the circle, where the outer crescent will be.
 
 ## 3. Explain machine learning through the spam score, training, and inference.
 
-Now, back to the learning part. A system that can learn may overcome some of these limitations. Machine learning is one way—in fact, one of the most important ways—to build AI. Machine learning means that a machine learns patterns from examples and data.
+Machine learning is one way to build AI. Instead of writing every rule by hand, we show examples to a model, and it learns patterns from them.
 
-In our email example, the system that marked this email as spam learned from a large number of emails that had already been labelled as spam or not spam.
+The system that marked this email as spam had been shown many earlier emails. Each one had already been labelled as spam or not spam. Showing the model those examples and letting it adjust is called training.
 
-But what does it actually mean to learn from past examples and use that learning? Is it magic? No. It is mathematics.
+Once training is complete, the model's learned parameters are held fixed while it is being used. The trained model can then predict or score new emails; this step is called inference. In our simplified example, the model assigned this email a 96 percent spam score, so the application labelled it **Spam**.
 
-A simple machine-learning system works in two phases. The first phase is learning, which we call training.
+These two steps are easier to understand with another example. Here is data from past plot sales in Muzaffarpur. Looking at the sales near 4,000 square feet, what price would you guess? Around ₹60 lakh, or ₹6 million, right?
 
-The second phase is using what it has learned, which we call inference.
+The line you see on screen starts in the wrong position. It is then adjusted live to minimise its overall error when predicting the prices of past sales.
 
-We used a previously trained model to predict that our email is spam. This is called inference.
+Congratulations! You have found the line with the lowest error among the ones we tried: `y = 14x + 7`. Your simple machine-learning model is now trained.
 
-Let's say you have a CSV file containing data about plot prices in Muzaffarpur, a city in Bihar. We can plot those examples on a graph.
+Let's use it to estimate the price of a 4,000-square-foot plot. Because `x` is measured in thousands of square feet, 4,000 square feet means `x = 4`. The predicted price is ₹63 lakh, or ₹6.3 million.
 
-Can you guess the price of a 4,000-square-foot plot? Around ₹60 lakh, or ₹6 million, right? You probably predicted it using intuition.
+Adjusting the line using the past sales was training. Using the finished line to predict a new price was inference.
 
-Now, let's see how a machine-learning model can be trained on this data.
+Advances in mathematics and computing have made machine-learning models useful across many fields. But the central idea remains the same: learn patterns during training, then use what was learned during inference.
 
-Let's begin with a line represented by the equation `y = ax + b`. If we adjust this line to minimise the overall error, we may get an approximate equation that can predict plot prices. With size measured in thousands of square feet and price in lakh rupees, one such line is `y = 14x + 7`.
-
-Putting 4,000 into this equation gives `14 × 4 + 7`, which is ₹63 lakh. That is close to the guess of about ₹60 lakh. So, we have used machine learning to make a prediction.
-
-The equation `y = ax + b` is the model in this example. Fitting it was training. Reading ₹63 lakh from the locked line was inference. These are the same two phases as the spam score.
-
-People still choose the examples, the objective, and how the system will be tested. The model does not invent its own job.
-
-And Machine Learning does not automatically mean a neural network. Our spam model only scored the message fields. It did not inspect the attachment, and it did not write the reply.
-
-
-
-Machine learning is a part of AI: it is one way to build systems that learn patterns from examples.
-
-
+So, the model that produced the spam score belongs inside the Machine Learning region of AI, while the rule-based checklist remains in the broader AI region, outside Machine Learning.
 
 ### Machine learning animation
 
-This segment uses three persistent screens:
+This segment uses the same three-screen world established earlier:
 
-- **Main email screen:** `x = [-8, 8]`, `y = [-4.5, 4.5]`.
-- **AI diagram screen:** `x = [8, 24]`, `y = [-4.5, 4.5]`.
-- **Machine Learning explainer screen:** `x = [-8, 8]`, `y = [4.5, 13.5]`.
+- **Main email screen:** centred at `[0, 0]`.
+- **AI diagram screen:** centred at `[16, 0]`.
+- **Machine Learning explainer screen:** centred at `[0, 9]`.
 
-The segment begins on the main email screen.
+The animation begins on Segment 2's exact closing frame: the larger solid AI circle on the AI diagram screen. Keep the camera at normal zoom through the moves between the three screens. Before the ball leaves the Machine Learning page, zoom out once so that page and the diagram both stay in frame, hold the camera still while the ball moves, and return to the diagram only after the ball has settled.
 
-#### Move from the spam result to Machine Learning
+#### 1. Let the spam result lead us into Machine Learning
 
-The **SPAM 96%** card becomes bright while the other three result cards remain dimmed. Create a copy of the Spam card in exactly the same position. Once the copy separates, the original Spam card dims again.
+Track horizontally from the AI diagram back to the email. Brighten the original **SPAM** card, create a copy in the same position, and dim the original once the copy separates.
 
-The camera zooms out while the copied card moves upward into the Machine Learning explainer screen. These actions happen simultaneously, so the audience can see where the new screen is relative to the email screen.
+The copied card moves upward, and the camera follows a fraction of a second later without pausing at the screen boundary. During the movement, unwrite **SPAM** and write **MACHINE LEARNING** on the same card. As the new title is written, visibly widen the card into a proper title banner. Do not add a subtitle inside this banner. It settles as the title on the upper screen. Beneath it, write the dominant takeaway:
 
-As the copied card crosses into the upper screen, its text changes from **SPAM 96%** to **MACHINE LEARNING**. The card expands slightly and becomes the title card for the new screen. The camera then zooms in and centres on the upper screen at approximately `[0, 9]`.
+**LEARNS PATTERNS FROM EXAMPLES**
 
-Give the core takeaway one clean beat before the training mechanism begins:
+The email, its four original results, their continuously tracking connectors, and the **TUE → WED** chip remain intact on the screen below.
 
-**MACHINE LEARNING LEARNS PATTERNS FROM EXAMPLES**
+#### 2. Establish training with labelled emails
 
-Light **ML** in the persistent legend, then keep **ML · LEARNS FROM EXAMPLES** docked beneath the title.
+Keep the Machine Learning title banner and its takeaway centred. Only the training simulation beneath them should be shifted slightly to the right so the examples have room to enter from the left.
 
-On the main screen below:
+Show a compact model on the right containing five or six large parameter gauges. The example emails should use the same visual language as the email established in the introduction: a dark inbox surface, top bar, sender/avatar row, subject and message lines. Keep only the information that remains readable at this smaller scale, and place the known **SPAM** or **NOT SPAM** label on the card.
 
-- The email remains at full opacity.
-- All four original result cards remain in place and dimmed.
-- All result connectors remain visible and continue tracking the email and their cards every frame. The flagged connector is still the three evidence arrows.
-- The **TUE → WED** chip remains in its established position.
+Send four clearly labelled examples into a small **TEXT → NUMBERS** box between the emails and the parameter model. Give it the subtitle **NUMERICAL FEATURES**. It represents converting the content of each email into numerical values that the model can process. Depending on the model, these may be engineered features, values such as TF-IDF scores, or learned representations.
 
-The main email screen is not rebuilt or removed. It remains available below the current camera view so we can return to it later.
+- **SPAM** — urgent transfer.
+- **NOT SPAM** — team update.
+- **SPAM** — prize waiting.
+- **NOT SPAM** — project review.
 
-Do not add a second definition beneath the title yet. Keep **MACHINE LEARNING** pinned near the top of the upper screen and use the space below it to demonstrate what learning means.
+As each email enters the **TEXT → NUMBERS** box, let a rapid stream of numerical values emerge from its other side. The values travel into the parameter model. Bring up **ERROR → UPDATE** on the first adjustment and leave it readable through the rest of the examples. Pulse the label as each example updates the gauges, then fade it as inference begins. The gauges still make a small adjustment with each example. Repeat the examples quickly so the numerical vectors feel almost continuous. Show **TRAINING** and **INFERENCE** as a two-state phase selector beneath the model. Keep **TRAINING** brightly filled and **INFERENCE** dim throughout this sequence.
 
-#### Learning from labelled emails
+#### 3. Contrast it with inference
 
-Write **LEARNING** beneath the title. In the centre of the screen, draw a green model box containing a tidy bank of six to eight vertical parameter gauges (meter-gauge is available in murali). The gauges represent adjustable numerical parameters; they should not resemble the three-item checklist from Segment 2.
+At the transition, dim **TRAINING**, brightly fill **INFERENCE** in cyan, and reveal **PARAMETERS LOCKED**. Send one unlabelled **NEW EMAIL** through the same **TEXT → NUMBERS** box. Its numerical values still travel into the model, but there is no error/update pulse and none of the locked gauges move. Keep the output card visually separate from the model, with a clear gap between their surfaces. Resolve the result in two beats, on one compact green pill sized to those two lines. Pad the pair evenly. **SPAM** stays the larger line; **96%** is a step smaller and still white.
 
-Miniature email cards enter from the left. Each card is clearly labelled **SPAM** or **NOT SPAM**. Use varied colours and short subject-line fragments so the cards feel like different examples rather than repeated copies:
+1. **SPAM**
+2. **96%**
 
-- **SPAM** — urgent transfer, unknown sender, suspicious link.
-- **NOT SPAM** — team update, known sender, ordinary wording.
-- **SPAM** — prize notification, suspicious link.
-- **NOT SPAM** — project review, known sender.
+The application-facing label and the model's illustrative internal score should remain visually distinct. Clear the pipeline after one short hold; do not replay it.
 
-As each labelled email enters the model, two or three gauges change height. Stagger the adjustments so the box appears to learn gradually from the collection rather than react to one decisive keyword. After the final example enters, change **LEARNING** into:
+#### 4. Make the plot-price example the main technical explanation
 
-**TRAINING = LEARNING FROM EXAMPLES**
+Write **PLOT PRICES IN MUZAFFARPUR**. Show a short CSV with six readable rows, then move it right while a graph appears on the left. Highlight each CSV row and transfer a corresponding dot to the graph. The dots form a plausible upward trend without lying perfectly on one line.
 
-Hold the trained gauge positions. When the narration asks, “Is it magic?”, briefly dim the surrounding elements and replace the gauge values with compact mathematical symbols. Reveal:
+At `4,000` square feet, show the viewer's intuitive estimate with amber guides and **₹60 LAKH**. Do not draw a fitted model line during this beat; this is a human reading the nearby cluster.
 
-**NOT MAGIC. MATHEMATICS.**
+Remove only the estimate guides, fade the CSV, and introduce `y = ax + b`. Draw one deliberately poor line with residuals, parameter chips, and an error indicator. Use three deliberate training states:
 
-Then restore the gauges without changing their final positions.
+1. A clearly poor line with large error.
+2. A closer line with shorter residuals.
+3. The final line with the lowest displayed error.
 
-#### Contrast training with inference
-
-Keep the model box in place. Move the completed Training statement to the left side of the model and add a small lock icon to the parameter gauges. On the right, reveal:
-
-**INFERENCE = USING A TRAINED MODEL**
-
-Use Machine Learning green for Training and a contrasting cyan for Inference. This colour distinction should remain consistent in later segments.
-
-When the narration says that the previously trained model predicted the current email, bring in one unlabelled email from the left. It passes through the locked model without changing any gauge. A result card emerges on the right and resolves in two beats:
-
-First **SPAM**, then **96%** beneath it.
-
-The essential visual distinction is:
-
-- During **Training**, many labelled examples enter and the parameters move.
-- During **Inference**, one new example enters and the trained parameters remain fixed.
-
-Hold both labels for a beat, then clear the email pipeline while leaving the **MACHINE LEARNING** title pinned at the top.
-
-#### Build the plot-price example
-
-This sequence shows the same two phases with the parameters visible. Do not present it as a second kind of machine learning, and do not define training or inference again.
-
-Write **PLOT PRICES IN MUZAFFARPUR** beneath the title. A CSV document appears in the centre with the columns **Plot size (sq ft)** and **Price (₹ lakh)**. Use a small, legible dataset whose fitted line lands near ₹63 lakh for 4,000 square feet, close to a visual guess of ₹60 lakh.
-
-The CSV shifts to the right. On the left, draw a graph with:
-
-- Horizontal axis: **Plot size (sq ft)**.
-- Vertical axis: **Price (₹ lakh)**.
-
-Animate the CSV row highlight moving downward. As each row is highlighted, a matching dot travels from the row into its correct position on the graph. The dots should form a clear upward trend but not a perfect line.
-
-#### Show the viewer's intuitive estimate
-
-When the narration asks for the price of a 4,000-square-foot plot, place an amber marker at `4,000` on the x-axis. Draw a dashed vertical guide upward to an estimated point near `60`, followed by a dashed horizontal guide left to the y-axis. Write **₹60 LAKH** beside the y-axis and add a small label:
-
-**YOUR ESTIMATE**
-
-Do not draw a fitted model line yet. This first estimate represents human intuition, not the machine-learning model.
-
-#### Train the line
-
-Before the narration introduces `y = ax + b`, remove only the amber estimate marker and its dashed guides. Keep the axes and all data points visible. Fade the CSV slightly so the graph becomes dominant.
-
-Write `y = ax + b` on the right, with small parameter chips for `a` and `b`. Draw an intentionally poor line across the graph. Add thin residual lines from each data point to the prediction line and a compact **ERROR** meter.
-
-Animate four or five deliberate training steps rather than continuously wobbling the line:
-
-1. The values of `a` and `b` change.
-2. The prediction line rotates and shifts.
-3. The residual lines become shorter overall.
-4. The Error meter decreases.
-
-Briefly pulse the currently changing parameter chip during each adjustment. This visually connects “adjusting the line” with “adjusting the parameters.”
-
-For readable arithmetic, measure `x` in thousands of square feet and `y` in lakh rupees. Settle on the illustrative trained equation:
+Settle on:
 
 **`y = 14x + 7`**
 
-At `x = 4`, this produces `y = 63`. Lock the `a` and `b` chips and stamp **TRAINED** beside the final equation. The dataset and final line should make this fit visually plausible, and the line should not pass through the viewer's earlier ₹60 lakh guess.
+Lock `a = 14` and `b = 7` and mark the model **TRAINED**.
 
-#### Use the trained model for inference
+On **“Congratulations!”**, clear the temporary **LOWEST ERROR** label and reveal the fitted equation and **TRAINED** state. Fire a restrained burst of Veena fireworks over the screen in the Machine Learning green, cyan, and amber palette. Let the fireworks accompany the first sentence, then fade them away while the clean trained-model frame remains visible for **“Your simple machine-learning model is now trained.”** Begin inference only after the full spoken line has finished.
 
-When the narration says, “Putting 4,000 into this equation,” transform **4,000 sq ft** into **`x = 4` thousand sq ft** beside the equation. Then reveal the substitution step by step:
+#### 5. Use the trained line for inference
+
+Transform **4,000 sq ft** into **`x = 4` thousand sq ft**, then write:
 
 **`y = 14(4) + 7 = 63`**
 
-At the same time, a cyan guide rises from `4,000` on the x-axis until it meets the fixed trained line, then travels left to the y-axis. Resolve the result as **₹63 LAKH**. The trained line and parameter values must remain fixed throughout this inference beat.
+A cyan guide rises from `x = 4` to the fixed trained line and moves across to **₹63 LAKH**. Neither the line nor its parameters move during this inference beat.
 
-#### Turn the graph into a model
+#### 6. Compress the explanation into one recap
 
-When the narration says, “The equation `y = ax + b` is our model,” fade the CSV and graph furniture while keeping the fitted line and equation visible. Compress them into a compact green card labelled:
+Fade **PLOT PRICES IN MUZAFFARPUR** with the graph. Keep the **MACHINE LEARNING** pill green. Compress the graph into a smaller dark panel, `#141C32`, with a green edge. The panel holds only:
 
-Place **MODEL** on the first line and `y = ax + b` directly beneath it.
+- A quiet caption: **PLOT PRICES IN MUZAFFARPUR**
+- **MODEL** — `y = 14x + 7`
+- Locked chips **a = 14** and **b = 7**
 
-Place the two locked parameter chips, `a = 14` and `b = 7`, inside the card. Beneath it, label the phases already named on the email demo:
+Under the panel, two bullets:
 
-- **TRAINING** — `a` and `b` were adjusted on the examples.
-- **INFERENCE** — the locked line produced **₹63 LAKH**.
+- A green bullet: **TRAINING** — adjust parameters using examples.
+- A cyan bullet: **INFERENCE** — use the locked model on a new example.
 
-For Training, briefly replay miniature data dots entering while `a` and `b` adjust. For Inference, lock both parameters and pass **4,000 sq ft** through the model to produce **₹63 lakh**. This is a compact reminder, not a second definition and not a second full demonstration.
+Do not fill the panel with the ML green. Keep this recap static. Do not run another example through it.
 
-#### Add Machine Learning to the AI diagram
+#### 7. Add Machine Learning to the master diagram
 
-Clear the recap elements, leaving only the green **MACHINE LEARNING** title card. Zoom out far enough to reveal the upper ML screen, the original email screen below, and the AI diagram screen to the right.
+Clear the recap. Zoom the camera out first, far enough to hold the Machine Learning page and the diagram together, and then keep the camera still. The **MACHINE LEARNING** pill morphs into a green ball that is already its final radius. Use one `ShapeMorph` from the rounded banner to that circle. Do not scale the banner down and cross-fade a second ball in, and do not grow the ball again after it lands. A short floor appears. The ball drops and bounces once. As it meets the floor again it jumps up on a slant toward the diagram, with no pause between the bounce and the jump. That floor leaves as it jumps, and a floor is waiting on the diagram. The ball falls onto that floor, gives two smaller bounces, and settles in its final seat. The camera does not move during the drop, the jump, or the landing.
 
-Move the Machine Learning card diagonally into the AI screen at `x = [8, 24]`, `y = [-4.5, 4.5]`. As it enters the AI box, expand it into a smaller green region labelled **MACHINE LEARNING**. Place **SPAM 96%** inside the ML region. Keep **FLAGGED** inside the larger AI region but outside ML.
+The opening frame still matches Segment 2, including the larger AI circle, and that circle stays where Segment 2 left it. The two circles share a bottom, with a thin gap, the way the desktop Venn does. Machine Learning sits inside AI, low in the circle, and the names sit in the upper part of each region so Deep Learning and Generative AI can be added inside later. Do not draw those two layers yet. Its edge and fill use the same colour. Write **MACHINE LEARNING** in the upper part of the green circle, and leave **AI** in the outer crescent.
 
-The spatial relationship must be immediately readable:
+Do not place **FLAGGED**, **SPAM 96%**, or an explanatory sentence inside or beneath the circles. Keep the final master diagram clean: show only the nested regions and their names.
 
-- **FLAGGED** is AI, but it is not Machine Learning.
-- **SPAM 96%** is Machine Learning, and Machine Learning sits inside AI.
-
-Zoom into the AI diagram and pulse the ML region once as the narration concludes:
-
-**Machine learning is one way to build AI.**
-
-Hold this composition for the transition into the next segment.
+After the ball has settled, move the camera in on the diagram and hold this composition for Segment 4.
 
 
 
@@ -397,19 +367,24 @@ Before we move deeper into Machine Learning, let's briefly compare it with anoth
 
 -> Live camera feed ends here; animation starts
 
-Machine Learning builds systems that learn patterns from data. In our previous example, the system learned from emails labelled as spam or not spam. It then applied those learned patterns to a new email and predicted its spam score.
+In our previous example, the system learned from emails labelled as spam or not spam. It then applied those learned patterns to a new email and predicted its spam score.
 
-Data Science, by contrast, can ask broader questions about the data itself. How many spam emails arrive every day? Where do they come from? Is their number increasing? What other patterns can we discover? Should an inbox have another category for important mail, besides spam and not spam?
+Data Science asks a broader set of questions about the data itself:
+- How many spam emails arrive every day?
+- Where do they come from?
+- Is their number increasing?
 
-To answer such questions, a data scientist may collect data, clean it, analyse it, visualise it, and sometimes build a machine-learning model.
+To answer such questions, a data scientist may collect, clean, explore, visualise, and validate data — and sometimes build a machine-learning model.
 
-So, Data Science and Machine Learning overlap, but they are not the same thing. Data Science can use Machine Learning as one of its tools. At the same time, building useful Machine Learning systems often relies on data-science practices — collecting, cleaning, exploring, and validating data — so that models learn from reliable data and their predictions can be interpreted.
+So, Data Science and Machine Learning overlap, but they are not the same thing. Data Science can use Machine Learning as one of its tools. At the same time, building useful Machine Learning systems often relies on many of the same data-science practices, so that models learn from reliable data and their outputs can be evaluated and interpreted.
 
-Machine Learning itself can happen in more than one way.
+These labelled emails also tell us what kind of learning this was.
 
 When we train a model using emails that have already been labelled as spam or not spam, that is called **supervised learning**. The model learns from examples for which the correct answer is already known.
 
-A model can also group unlabelled examples, mix a few labels with many unlabelled ones, or learn from a reward after an action. Those are different lessons. Today, remember supervised learning. The spam score was trained that way, and the dog picture will be too.
+Models can also discover structure in unlabelled data. This is called **unsupervised learning**. They can learn from a few labelled examples combined with many unlabelled ones — called **semi-supervised learning**. Or they can learn from rewards received after taking actions — called **reinforcement learning**.
+
+For now, remember supervised learning. The spam model was trained this way, and so was the dog classifier we will examine next.
 
 
 ### 4. ML vs Data Science Animation
@@ -423,83 +398,119 @@ The persistent screens are now:
 - **AI diagram screen:** `x = [8, 24]`, `y = [-4.5, 4.5]`.
 - **Data Science and learning-types screen:** `x = [24, 40]`, `y = [-4.5, 4.5]`.
 
-During the live-camera section, hold Segment 3's final taxonomy frame completely still, including the Kavriq logo. When the live-camera section ends, zoom out to reveal the adjacent screen at `x = [24, 40]`, `y = [-4.5, 4.5]`, and move the camera into it.
+During the live-camera section, hold Segment 3's final taxonomy frame completely still, including the Kavriq logo. When the live-camera section ends, slide the camera horizontally to the adjacent screen at `x = [24, 40]`, `y = [-4.5, 4.5]`. Do not zoom out between the two screens.
 
-Begin by writing **MACHINE LEARNING vs DATA SCIENCE** near the top of the screen.
+Begin with a short callback to the previous segment, split across two lines so it can be read at a glance. Use the same email card already on the main screen, scaled down. Do not draw a separate simplified email.
 
-Light **Data Science** in the persistent terminology legend when the comparison title appears. Keep **ML** lit. The circles, once they settle, must show an overlap without implying that either field wholly contains the other.
+On the first line, several scaled copies gather. Each copy carries a visible **SPAM** or **NOT SPAM** mark, and the line ends at one **LEARNED PATTERNS** pill:
 
-As the questions are spoken, show three slate chips on the Data Science side:
+**[labelled emails] → LEARNED PATTERNS**
 
-- **HOW MANY PER DAY**
-- **WHERE FROM**
-- **INCREASING?**
+On the second line, a copy of that learned-patterns pill moves down and the unstamped sample email joins it. Together they lead to the score:
 
-Then draw two solid circles. Label the circle on the left **MACHINE LEARNING**, fill `#1E7A55`, and the circle on the right **DATA SCIENCE**, fill `#677585`. Move them together once and settle them with a solid overlap. Fill that overlap with `#123744`. Do not use transparency, and do not bounce the circles apart.
+**LEARNED PATTERNS + [the email] → SPAM 96%**
 
-In the overlap, write **DATA** in bold. Beneath it, reveal the shared practices on separate lines:
+Keep the result of the first line visible so both stages can be read together. This is only a recap. Do not repeat the training simulation or animate adjustable parameters again. Clear both lines once the contrast with Data Science is established.
 
-- **COLLECT**
-- **CLEAN**
-- **EXPLORE**
-- **VALIDATE**
+First, write **DATA SCIENCE** by itself near the top of the screen. As the Data Science questions are spoken, show three warm-gold chips in the centre using the narration's wording:
 
-Also place a chip in the overlap reading **MACHINE LEARNING AS A TOOL**, so both spoken claims are visible: the fields share data practices, and Data Science can use a model as one tool.
+- **HOW MANY PER DAY?**
+- **WHERE DO THEY COME FROM?**
+- **IS THE NUMBER INCREASING?**
 
-From the Machine Learning side, draw an arrow toward the lower-left and write:
+When the comparison begins, move the question chips to the right and mute them. Fade the standalone **DATA SCIENCE** headline away; do not replace it with a comparison title.
 
-**LEARN PATTERNS FROM DATA → PREDICTIONS**
+Only after those elements settle, reveal two larger, already-overlapping solid circles in their final positions. Fill the left circle with Machine Learning green `#1E7A55`, the right circle with Data Science gold `#956B22`, and their larger explicit overlap lens with the consistent solid colour `#40512A`. Construct the lens from the same circular arcs as the two circles so no differently coloured slivers appear around its edge. Write **MACHINE LEARNING** and **DATA SCIENCE** inside their respective non-overlapping regions; do not add a title or **vs** above them. Do not place the Data Science circle beneath the question stack. Do not use transparency, drops, collisions, or bouncing, and do not imply that either field wholly contains the other.
 
-From the Data Science side, draw an arrow toward the lower-right and write:
+Place the shared practices on separate lines inside the lens:
 
-**FIND INSIGHTS IN DATA → INFORM DECISIONS**
+**COLLECT**  
+**CLEAN**  
+**EXPLORE**  
+**VISUALISE**  
+**VALIDATE**
 
-Keep these two statements aligned along the bottom so the distinction can be understood at a glance. Leave this comparison on the side screen. Do not add Data Science to the master diagram yet. The summary places it there, overlapping Machine Learning and extending beyond Artificial Intelligence.
+Keep the three muted question chips visible to the right of the circles, with clear space between them and the Data Science circle. Do not add **INSIGHTS → DECISIONS** there. The opening callback has already shown the Machine Learning path from patterns to a prediction, so do not repeat **PATTERNS → PREDICTIONS** in the green-only area.
 
-When the narration names supervised learning, dim the Data Science circle and write **SUPERVISED LEARNING** inside the Machine Learning circle. Beneath it, in smaller dim type, list the other ways without walking through each one:
+When the narration says that Data Science can use Machine Learning as one of its tools, replace the shared-practices list inside the overlap with:
 
+**DATA SCIENCE CAN USE**  
+**MACHINE LEARNING**  
+**AS ONE TOOL**
+
+Do not draw arrows to both circles; that would incorrectly suggest a symmetric tool relationship. Remove this statement before the learning-types transition.
+
+Leave this comparison on the side screen. Do not add Data Science to the master diagram yet. The summary places it there, overlapping Machine Learning and extending beyond Artificial Intelligence.
+
+For the learning types, move away from the Venn comparison and introduce the clearer, non-exhaustive heading **FOUR COMMON LEARNING APPROACHES**. Keep a larger green Machine Learning circle beneath it with generous space around the circle, then arrange a clean row of four cards lower on the screen. The cards should emerge from the green circle so that they clearly read as approaches used in Machine Learning:
+
+- **SUPERVISED**
 - **UNSUPERVISED**
 - **SEMI-SUPERVISED**
 - **REINFORCEMENT**
 
-Do not introduce self-supervised learning here. That term arrives with foundation models. Highlight **SUPERVISED LEARNING** and connect it back to the **SPAM 96%** card.
+Keep all four cards visible. Light **SUPERVISED** when its sentence is spoken. Each of the other cards remains muted until its own sentence, lights briefly when named, and returns to its muted state afterward. Do not introduce self-supervised learning here; that term arrives with foundation models.
+
+On **For now, remember supervised learning**, mute the other three cards and restore **SUPERVISED** as the sole active card. Keep **SUPERVISED** fully lit through the remainder of the segment; do not dim it on the final frame. Connect a small **SPAM 96%** callback to it first. Then add the familiar dog-attachment thumbnail beside the spam result and connect that to **SUPERVISED** as well. Keep both callbacks visible through the final line; do not replace the spam result with the dog.
+
+The dog here is only the familiar thumbnail. Segment 5 still begins on the email and carries the full dog card to its own screen. Do not add either callback to the master diagram or alter Segment 3's clean closing frame.
 
 
 ## 5. Explain deep learning and neural networks through the dog attachment.
 
-One of the AI systems that worked on this email looked at the attachment and recognised the dog in the picture. And no prize for guessing that this one is also a machine-learning system.
+### 5A. From the dog classifier to Deep Learning
 
-This system was trained on a large collection of animal pictures. Each training picture was already labelled with the correct animal type, such as cat, dog, or horse. Because we use labelled data to train the model, this is an example of supervised learning.
+One of the AI systems that worked on this email looked at the attachment and recognised the dog in the picture. And no prize for guessing that this is also a machine-learning system.
 
-This is also deep learning. Deep learning is machine learning that uses neural networks with many layers. It is called *deep* because many layers sit between the input and the answer. No other reason.
+It was trained on animal pictures labelled as cats, dogs, horses, and so on. So, like the spam model, it learned through supervised learning. But this model also uses a particular kind of Machine Learning called Deep Learning.
+
+Deep learning is a machine learning technique that uses neural networks with many layers. It is called *deep* because many layers sit between the input and the answer. No other reason.
+
+### 5B. Parameters and training
 
 But how does the training happen?
 
-In the plot-price example, the adjustable numbers were two parameters: `a` and `b`. A neural network contains many more adjustable numbers. Many of them are called weights, and in our simplified diagram, they sit on the connections between units.
+In the plot-price example, the fitted line had only two adjustable parameters: `a` and `b`. During training, their values were adjusted to 14 and 7. A neural network can contain many more such parameters. Many of them are called weights, and in our simplified diagram, those weights sit on the connections between units.
 
-A layer is one stage of calculation. The picture passes through one layer, then the next, and then the next. During training, the network's guesses are compared with the correct labels. Based on how far those guesses are from the correct answers, the weights are adjusted slightly. Across many examples, those adjustments help the network make better predictions. The model is not simply storing all the pictures. It is learning patterns that help it predict a label for a new picture.
+A layer is one stage of calculation. Inside the network, the picture is represented as numbers. Those numbers pass through one layer, then the next, and then the next. The final layer produces the network's guess.
+
+During training, this journey is repeated across many labelled pictures. The network's final guess is compared with the correct label. Based on how far the guess is from the correct answer, the weights are adjusted slightly. Across many examples, these adjustments help the network make better predictions.
+
+The model is not simply storing all the pictures. It is learning patterns that help it predict a label for a new picture.
+
+### 5C. What the layers learn
 
 The layers can learn a hierarchy of useful features. Early layers may respond to simple edges. Later layers can combine those edges into textures and shapes, and deeper layers can assemble that evidence into a prediction such as **dog**. This is a simplified picture—not every network separates the steps so neatly—but it explains why multiple layers can be useful.
 
 In many older Machine Learning systems, people had to decide which features the model should measure. Deep networks can learn many of those useful features directly from the training examples.
 
-Why call the network *neural*? “Neural” is a loose nod to the neurons in a brain. This is not a brain. It is layers of mathematics. Each artificial unit receives numbers from the previous layer, combines them, and passes a new number forward. That number can be zero.
+### 5D. Why it is called neural, and how inference works
 
-Once training ends, the weights stay fixed. This attachment is a new picture, and it does not come with an answer label. The network makes one forward pass and predicts: dog, 98 percent. It can still be wrong.
+Why call the network *neural*? “Neural” is a loose nod to the neurons in a brain. This is not a brain. It is layers of mathematics. Each artificial unit receives numbers from the previous layer, combines them, and passes a new number forward.
+
+Once training ends and inference begins, the weights stay fixed. This attachment is a new picture, and it does not come with an answer label. The network makes one forward pass and predicts: dog, 98 percent. It can still be wrong.
+
+### 5E. Why Deep Learning became powerful—and difficult to inspect
 
 Larger datasets, faster chips, and better training methods made these networks increasingly effective. That progress drove major advances in computer vision, speech recognition, and language processing.
 
 There is a trade-off. A deep network may contain millions—or even billions—of adjustable numbers. We can inspect every calculation and still struggle to explain exactly why one internal pattern produced the answer **dog**.
 
-So far, we have shown a very simple neural network. Real deep-learning networks can contain hundreds of layers and vast numbers of units and parameters. Even the network you are seeing now has six layers and 100 nodes per layer. If we tried to show every part of a production-scale network, the screen would quickly become unreadable, so we had to scale back.
+The small network we have shown so far was only a sketch. Real deep-learning networks can contain hundreds of layers and vast numbers of units and parameters.
 
-Our map now gains another layer. Deep Learning sits inside Machine Learning, and Machine Learning sits inside Artificial Intelligence. Every Deep Learning system is a Machine Learning system, but not every Machine Learning system uses Deep Learning. Our dog classifier belongs in the Deep Learning region.
+The network opening in front of us now has six layers, with 100 nodes in each layer. That is already enough to look dense, but it is still far smaller than many production networks. Showing every part of one of those networks would make the screen unreadable.
+
+### 5F. Add Deep Learning to the map
+
+Our map now gains another layer. Deep Learning sits inside Machine Learning, and Machine Learning sits inside Artificial Intelligence. Every Deep Learning system is a Machine Learning system, but not every Machine Learning system uses Deep Learning.
+
+The simple spam model we showed was Machine Learning and did not use a neural network. The dog classifier we are examining does use one, so it belongs inside the Deep Learning region.
 
 The dog is solved. The day is not.
 
 ## 5. Animation: Explain deep learning and neural networks through the dog attachment.
 
-Start on the main email screen. Keep all four result cards muted. Place a copy of the **DOG 98%** card directly over its muted original, then move the copy towards the upper screen at `x = [-8, 8]`, `y = [4.5, 13.5]`. The original card remains muted on the email screen.
+Start on the main email screen. Keep all four result cards muted. Place a copy of the **DOG DETECTED** card directly over its muted original, then move the copy towards the upper screen at `x = [-8, 8]`, `y = [4.5, 13.5]`. The original card remains muted on the email screen. Reveal **DOG 98%** only later, when the deep-learning model produces its class scores during inference.
 
 When the copied card reaches the upper screen, morph its label into **MACHINE LEARNING**. When the narration introduces deep learning, add the violet **DEEP LEARNING** label beneath it so that the hierarchy remains clear: Deep Learning is a kind of Machine Learning.
 
